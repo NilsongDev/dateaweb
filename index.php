@@ -232,6 +232,20 @@ if(isset($_SESSION['emailuser'])){
         </div>
     </nav>
 
+    <script>
+        function pruebaemail(valor) {
+            re = /^([\da-z_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/
+            if (!re.exec(valor)) {
+                alert('email incompleto');
+            } else {
+                <?php $ruta = "validarformulario.php"; ?>
+            }
+        }
+    </script>
+
+
+
+
 
     <br>
 
