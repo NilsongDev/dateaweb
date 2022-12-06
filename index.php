@@ -516,7 +516,7 @@ if(isset($_SESSION['emailuser'])){
 
 
     <div class=" mt-4 ">
-        <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none   md:text-5xl lg:text-6xl text-blue-600 dark:text-blue-500">PERSONAS REGISTRADAS </h1>
+        <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none   md:text-5xl lg:text-6xl text-blue-600 dark:text-blue-500">PERSONAS REGISTRADAS</h1>
         <div class="splider bg-secondary ">
 
             <div class="splide__slider">
