@@ -305,7 +305,7 @@ if(isset($_SESSION['emailuser'])){
 
     <div class=" slideshow-container mt-4">
 
-        <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none  md:text-5xl lg:text-6xl text-blue-600 dark:text-blue-500">Perfile Destacados</h1>
+        <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none  md:text-5xl lg:text-6xl text-blue-600 dark:text-blue-500">Comuna Destacada</h1>
         <div class="splide bg-secondary">
             <div class="splide__slider">
                 <div class="splide__track">

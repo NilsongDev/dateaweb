@@ -23,8 +23,8 @@ header("refresh:2;url=../index.php");
     <script>
         Swal.fire({
             icon: 'warning',
-            title: 'Adios',
-            text: 'cerrando sesion',
+            title: 'Adiós',
+            text: 'cerrando sesión',
             showConfirmButton: false,
             
         })

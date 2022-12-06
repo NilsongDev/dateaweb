@@ -259,7 +259,7 @@ if (isset($_SESSION['emailuser'])) {
                 $comunauser = $fila["comunausuario"];
                 $descripcionUser = $fila["descripcionuser"];
                 $oficio = $fila["nombre_oficio"];
-                $estado =$fila["estado_disponible"];
+                $estado = $fila["estado_disponible"];
             ?>
 
                 <li class="contenedorli">
@@ -272,13 +272,13 @@ if (isset($_SESSION['emailuser'])) {
                     <div class="relative perfilselect">
                         <img class="w-36 h-36  rounded-full" src="./componentes/images/logoTrabajador.png" alt="">
 
-                        <?php if(intval($estado)==1 ){ ?>
-                        <span class="top-0 left-7 absolute  w-3.5 h-3.5 bg-green-400 border-2 border-white dark:border-gray-800 rounded-full"></span>
-                        <?php   }else{    ?>
+                        <?php if (intval($estado) == 1) { ?>
+                            <span class="top-0 left-7 absolute  w-3.5 h-3.5 bg-green-400 border-2 border-white dark:border-gray-800 rounded-full"></span>
+                        <?php   } else {    ?>
 
-                            <span class="top-0 left-7 absolute  w-3.5 h-3.5 bg-red-400 border-2 border-white dark:border-gray-800 rounded-full"></span>   
-                        
-                            <?php }?>
+                            <span class="top-0 left-7 absolute  w-3.5 h-3.5 bg-red-400 border-2 border-white dark:border-gray-800 rounded-full"></span>
+
+                        <?php } ?>
 
 
                         <h3 class="mb-4 text-xl tracking-tight leading-none   text-blue-600 dark:text-blue-500">Descripcion: <?php echo $descripcionUser; ?></h3>
@@ -289,7 +289,7 @@ if (isset($_SESSION['emailuser'])) {
                 </li>
 
             <?php
-         
+
 
             }
 
@@ -310,7 +310,7 @@ if (isset($_SESSION['emailuser'])) {
 
 
 
-    
+
     <div>
 
         <?php
@@ -323,17 +323,32 @@ if (isset($_SESSION['emailuser'])) {
 
         $total_paginas = ceil($total_registros / $porpaginas);
 
+            
 
-        echo "<center><a href='categorias.php?pagina=1'>" . 'INICIO.....' . "</a>";
-        for ($i = 1; $i <= $total_paginas; $i++) {
-            echo "<a href='categorias.php?pagina=" . $i . "'>" . ".$i." . "</a>";
-        }
-        echo "<a href='categorias.php?pagina=$total_paginas'>" . '.....FIN' . "</a></center>";
 
         ?>
 
 
+        <nav aria-label="Page navigation example" class="">
+            <ul class="flex justify-center items-center  ">
+                <li>
+                    <a href="categorias.php?pagina=1" class="px-3 py-2 ml-0 leading-tight text-gray-500 bg-white border border-gray-300 rounded-l-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Inicio</a>
+                </li>
 
+            <?php  for ($i = 1; $i <= $total_paginas; $i++) {         ?>
+
+                <li>
+                    <a href="categorias.php?pagina= <?php echo $i ?>" class="px-3 py-2 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"><?php echo $i ?> </a>
+                </li>
+            
+            <?php    }       ?>
+
+
+                <li>
+                    <a href="categorias.php?pagina=<?php echo $total_paginas ?>" class="px-3 py-2 leading-tight text-gray-500 bg-white border border-gray-300 rounded-r-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Final</a>
+                </li>
+            </ul>
+        </nav>
 
 
 
@@ -360,7 +375,7 @@ if (isset($_SESSION['emailuser'])) {
 
 
     </div>
-
+<br>
     <footer class="p-4 bg-white sm:p-6 dark:bg-gray-900 ">
         <div class="md:flex md:justify-between ">
             <div class="mb-6 md:mb-0">

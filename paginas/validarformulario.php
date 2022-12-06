@@ -25,7 +25,7 @@ $ress = pg_num_rows($res);
 
     <?php
 
-    if ($ress) {
+    if ($ress || $ress=="" || $ress==NUll) {
     ?>
         <script>
             Swal.fire({
