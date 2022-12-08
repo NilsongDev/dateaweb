@@ -519,7 +519,7 @@ $ceramista="Ceramista";
                             <a href="../politicas.php" class="hover:underline">política de privacidad</a>
                         </li>
                         <li>
-                            <a href="../terminos.php" class="hover:underline">Terminos &amp; Condiciones</a>
+                            <a href="../terminos.php" class="hover:underline">Términos &amp; Condiciones</a>
                         </li>
                     </ul>
                 </div>
