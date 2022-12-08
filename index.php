@@ -55,7 +55,7 @@ if(isset($_SESSION['emailuser'])){
                 </div>
                 <aside style="text-align:center">
                     <div class="ttl">
-                        <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none  md:text-5xl lg:text-6xl text-blue-600 dark:text-blue-500">BIENVENIDO A LA COMUNIDAD DE LA CONSTRUCCIÓN DEL</h1><h1 class="mb-4 text-4xl font-extrabold inline-block md:text-5xl lg:text-6xl  dark:text-blue-900 text-blue-900">BÍO-BÍO</h1>
+                        <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none  md:text-5xl lg:text-6xl text-blue-600 dark:text-blue-500">BIENVENIDO A LA COMUNIDAD DE LA CONSTRUCCIÓN DEL</h1><h1 class="mb-4 text-4xl font-extrabold inline-block md:text-5xl lg:text-6xl  dark:text-blue-900 text-blue-900">BIO-BÍO</h1>
                     </div>
                     <p class="text-lg font-bold dark:text-gray-400 text-gray-500">Regístrate o sigue nuestras Redes Sociales</p> <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" )> <a href="paginas/formularioRegistro.php">REGISTRATE</a> </button>
                 </aside>
@@ -449,18 +449,18 @@ if(isset($_SESSION['emailuser'])){
                 <div class="regiones">
                     <h1>SELECCIONAR COMUNA</h1>
                     <select class="names regg container p-3 m-6" name="comunas">
-                        <option value="Concepcion">concepcion</option>
-                        <option value="Coronel">coronel</option>
-                        <option value="Chiguayante">chiguayante</option>
-                        <option value="Florida">florida</option>
-                        <option value="Hualqui">hualqui</option>
-                        <option value="Lota">lota</option>
-                        <option value="Penco">penco</option>
-                        <option value="San_pedro">san pedro</option>
-                        <option value="Santa_juana">santa juana</option>
-                        <option value="Talcahuano">talcahuano</option>
-                        <option value="Tome">tome</option>
-                        <option value="Hualpen">hualpen</option>
+                        <option value="Concepcion">Concepción</option>
+                        <option value="Coronel">Coronel</option>
+                        <option value="Chiguayante">Chiguayante</option>
+                        <option value="Florida">Florida</option>
+                        <option value="Hualqui">Hualqui</option>
+                        <option value="Lota">Lota</option>
+                        <option value="Penco">Penco</option>
+                        <option value="San_pedro">San Pedro</option>
+                        <option value="Santa_juana">Santa Juana</option>
+                        <option value="Talcahuano">Talcahuano</option>
+                        <option value="Tome">Tome</option>
+                        <option value="Hualpen">Hualpen</option>
                     </select>
                     <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">BUSCAR</button>
                 </div>

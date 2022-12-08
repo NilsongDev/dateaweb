@@ -57,63 +57,50 @@ session_start(); ?>
 
 
 
+    <div class="font-sans">
+        <div class="relative p-20 flex flex-col sm:justify-center items-center ">
+            <div class="relative sm:max-w-sm w-full">
+                <div class="card bg-blue-400 shadow-lg  w-full h-full rounded-3xl absolute  transform -rotate-6"></div>
+                <div class="card bg-blue-400 shadow-lg  w-full h-full rounded-3xl absolute  transform rotate-6"></div>
+                <div class="relative w-full rounded-3xl  px-6 py-4 bg-gray-100 shadow-md">
+                    <label for="" class="block mt-3 text-sm text-gray-700 text-center font-semibold">
+                        Iniciar Sesión
+                    </label>
+                    <form method="POST" action="validar.php" class="mt-10">
 
 
 
+                        <div class="mt-7">
+                            <input  placeholder="Correo electronico" name="usuario" id="username" type="email" class="mt-1 block w-full border-none bg-gray-100 h-11 rounded-xl shadow-lg hover:bg-blue-100 focus:bg-blue-100 focus:ring-0">
+                        </div>
+
+                        <div class="mt-7">
+                            <input type="password" placeholder="Contraseña" name="clave" id="password"   required maxlength="10" class="mt-1 block w-full border-none bg-gray-100 h-11 rounded-xl shadow-lg hover:bg-blue-100 focus:bg-blue-100 focus:ring-0">
+                        </div>
+
+                        
 
 
 
-
-
-    <div class="w-full max-w-xs login">
-        <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" action="validar.php" method="POST">
-
-            <div class="mb-4">
-                <label class="block text-gray-700 text-sm font-bold mb-2" for="username">
-                    NOMBRE DE USUARIO
-                </label>
-                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" name="usuario" id="username" type="text" placeholder="ejemplo@gmail.com  ">
-            </div>
-
-
-            <div class="mb-6">
-                <label class="block text-gray-700 text-sm font-bold mb-2" for="password">
-                    CONTRASEÑA
-                </label>
-                <input class="shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" name="clave" id="password"  type="password" placeholder="*********">
-                
-            </div>
-
-
-            <div class="flex items-center justify-between">
-                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
-                    INICIAR SESION
-                </button>
-                <a class="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800" href="#">
+                        <div class="mt-7">
+                            <button type="submit" onClick="pruebaemail(correo.value);" class="bg-blue-500 w-full py-3 rounded-xl text-white shadow-xl hover:shadow-inner focus:outline-none transition duration-500 ease-in-out  transform hover:-translate-x hover:scale-105">
+                                Iniciar Sesión
+                            </button>
+                        </div>
+                        <br>
+                        <a class="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800" href="#">
                 ¿Has olvidado tu contraseña?
                 </a>
+
+
+
+                    
+                    </form>
+                  
+                </div>
             </div>
-
-
-        </form>
-      
+        </div>
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
