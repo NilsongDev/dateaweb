@@ -129,7 +129,7 @@ if (isset($_SESSION['emailuser'])) {
 
                         <!-- Modal toggle -->
                         <button class="block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button" data-modal-toggle="authentication-modal">
-                            iniciar sesion
+                            iniciar sesión
                         </button>
 
                         <!-- Main modal -->
@@ -156,7 +156,7 @@ if (isset($_SESSION['emailuser'])) {
                                             </div>
                                             <div class="flex justify-between">
 
-                                                <a href="#" class="text-sm text-blue-700 hover:underline dark:text-blue-500">Perdiste tu password?</a>
+                                         
                                             </div>
                                             <button type="submit" class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">ingresar a tu cuenta</button>
                                             <div class="text-sm font-medium text-gray-500 dark:text-gray-300">
@@ -204,7 +204,7 @@ if (isset($_SESSION['emailuser'])) {
 
                             </ul>
                             <div class="py-1">
-                                <a href="./paginas/cerrarsesion.php" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">CERRAR SESION</a>
+                                <a href="./paginas/cerrarsesion.php" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">CERRAR SESIÓN</a>
                             </div>
                         </div>
 
@@ -253,8 +253,8 @@ if (isset($_SESSION['emailuser'])) {
 
         <br>
         <div>
-            <h4 class="mb-4 text-4xl tracking-tight leading-none  md:text-5xl lg:text-6xl text-blue-600 dark:text-blue-500">:D </h4>
-
+            <h4 class="mb-4 text-4xl tracking-tight leading-none  md:text-5xl lg:text-6xl text-blue-600 dark:text-blue-500"></h4>
+            <h3 class="mb-4 text-4xl tracking-tight leading-none   text-blue-600 dark:text-blue-500">Los terminos y condiciones de esta plataforma esta asociados a un prototipo base, el cual su contenido o uso es confidencial.</h3>          
 
 
 

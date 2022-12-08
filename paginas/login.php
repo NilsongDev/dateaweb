@@ -88,9 +88,7 @@ session_start(); ?>
                             </button>
                         </div>
                         <br>
-                        <a class="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800" href="#">
-                ¿Has olvidado tu contraseña?
-                </a>
+              
 
 
 
