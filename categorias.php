@@ -139,7 +139,7 @@ if (isset($_SESSION['emailuser'])) {
 
                             </ul>
                             <div class="py-1">
-                                <a href="./paginas/cerrarsesion.php" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">CERRAR SESION</a>
+                                <a href="./paginas/cerrarsesion.php" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">CERRAR SESIÓN</a>
                             </div>
                         </div>
 
@@ -233,7 +233,7 @@ if (isset($_SESSION['emailuser'])) {
             }
 
             $empieza = ($pagina - 1) * $porpaginas;
-            $query = "SELECT * FROM perfilusuario inner join oficio_user on oficio_user.fk_oficio_user = perfilusuario.codigologin inner join estado_user on estado_user.estado_fk=perfilusuario.codigologin order by nombreuser limit $porpaginas offset $empieza";
+            $query = "SELECT * FROM perfilusuario inner join oficio_user on oficio_user.fk_oficio_user = perfilusuario.codigologin inner join estado_user on estado_user.estado_fk=perfilusuario.codigologin order by comunausuario limit $porpaginas offset $empieza";
             $resultado = pg_query($conexion, $query);
 
 

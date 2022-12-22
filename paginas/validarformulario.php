@@ -13,6 +13,25 @@ $res = pg_query($conexion, $consultaEmail);
 $ress = pg_num_rows($res);
 
 
+if(pg_num_rows($res)>0){
+    while($row = pg_fetch_assoc($res)){
+       $emailrespuesta= $row["username"];
+
+    }
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
 ?> <html>
 
 <head>
@@ -25,7 +44,7 @@ $ress = pg_num_rows($res);
 
     <?php
 
-    if ($ress || $ress=="" || $ress==NUll) {
+    if ($ress >= 1) {
     ?>
         <script>
             Swal.fire({
@@ -39,7 +58,8 @@ $ress = pg_num_rows($res);
 
 
     <?php
-
+        //echo $ress;
+        
         header("refresh:2;url=formularioRegistro.php");
     } elseif ($passUsuario1 == $passUsuario2) {
 

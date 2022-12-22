@@ -204,7 +204,7 @@ if ($queryconsulta) {
                                  
                                     $resul=isset($_POST['estado_user']);
 
-                                
+                                echo $consultaEstado,"  ",$resul;
                                   // echo  "resultado while ".$resultadoEstado." resultado id".$idsesion ." resultado post ".$resul;
                                     
                                 ?>
@@ -220,7 +220,7 @@ if ($queryconsulta) {
 
                                 <form action="userperfil.php" method="POST">
                                 
-                                <?php if (     $estadoUSerDisponible  <    $resultadoEstado ) {
+                                <?php if (    $resultadoEstado   >    $estadoUSerDisponible ) {
                                 
                                 ?>
 
@@ -241,7 +241,7 @@ if ($queryconsulta) {
                                  $queryEstadoD=pg_query($conexion,$actualizarEstado);      
                                 //echo  $actualizarEstado;
 
-                                } elseif (    $estadoUSerNoDisponible >   $resultadoEstado ) { 
+                                } elseif (  $resultadoEstado   < $estadoUSerNoDisponible   ) { 
                                     
                                     ?>
 

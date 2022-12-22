@@ -67,8 +67,9 @@ if(isset($_POST['check'])){
                 break;
     
             case 7:
-                $electro="Electrico";
-                $select2 = "SELECT * from perfilusuario inner join oficio_user on oficio_user.fk_oficio_user = perfilusuario.codigologin inner join estado_user on estado_user.estado_fk=perfilusuario.codigologin where perfilusuario.comunausuario = '$resultadoComuna' and oficio_user.nombre_oficio='$electro'";
+                $electro1="Electrico";
+                $electro=trim($electro1);
+                $select2 = "SELECT * from perfilusuario inner join oficio_user on oficio_user.fk_oficio_user = perfilusuario.codigologin inner join estado_user on estado_user.estado_fk=perfilusuario.codigologin where perfilusuario.comunausuario = '$resultadoComuna' and oficio_user.nombre_oficio like'%$electro%'";
                 $resultado1 = pg_query($conexion, $select2);
                 break;
     
