@@ -204,48 +204,34 @@ if ($queryconsulta) {
                                  
                                     $resul=isset($_POST['estado_user']);
 
-                                echo $consultaEstado,"  ",$resul;
+                    
+                               
+                               
+                          
                                   // echo  "resultado while ".$resultadoEstado." resultado id".$idsesion ." resultado post ".$resul;
                                     
                                 ?>
 
 
+                                <h2>Tu estado es:<?php if($estadoDisponible== 1){
+                                    echo " DISPONIBLE";
+                                }elseif($estadoDisponible == 2){
+                                    echo " OCUPADO";
+                                } ?> </h2>
 
-
-
-
-
-
-
-
-                                <form action="userperfil.php" method="POST">
                                 
-                                <?php if (    $resultadoEstado   >    $estadoUSerDisponible ) {
+
+
+
+
+
+
+
+
+
+
+                                <form action="estadouser.php" method="POST">
                                 
-                                ?>
-
-                                    <li>
-                                        <div class="text-teal-600 "><input type="radio" class="text-green-500" checked  name="estado_user" id="" value="1"> Disponible</div>
-                                    </li>
-
-                               
-                                   <li>
-                                        <div class="text-teal-600"><input type="radio" class="text-red-500" name="estado_user" id="" value="2"> No Disponible</div>
-                                    </li>
-                               
-                                   
-                               
-                               <?php
-                               
-                                 $actualizarEstado="UPDATE estado_user SET  estado_disponible ='$estadoUSerDisponible ' where estado_fk='$id' ";
-                                 $queryEstadoD=pg_query($conexion,$actualizarEstado);      
-                                //echo  $actualizarEstado;
-
-                                } elseif (  $resultadoEstado   < $estadoUSerNoDisponible   ) { 
-                                    
-                                    ?>
-
-
                              
 
                                     <li>
@@ -254,66 +240,18 @@ if ($queryconsulta) {
 
                                
                                    <li>
-                                        <div class="text-teal-600"><input type="radio" class="text-red-500" checked name="estado_user" id="" value="2"> No Disponible</div>
-                                    </li>
-
-
-
-
-
-                                
-
-                                <?php 
-                                    $actualizarEstado="UPDATE estado_user SET  estado_disponible ='$estadoUSerNoDisponible' where estado_fk='$id' ";
-                                    $queryEstadoO=pg_query($conexion,$actualizarEstado);
-                                   
-                                    //echo  $actualizarEstado;
-                            
-                            
-                                    }elseif(     $resultadoEstado!= $estadoUSerDisponible  &&      $resultadoEstado!=    $estadoUSerNoDisponible ){ ?>
-
-
-                                    <li>
-                                        <div class="text-teal-600 "><input type="radio" class="text-green-500"   name="estado_user" id="" value="1"> Disponible</div>
-                                    </li>
-
-                               
-                                   <li>
                                         <div class="text-teal-600"><input type="radio" class="text-red-500" name="estado_user" id="" value="2"> No Disponible</div>
                                     </li>
+                               
 
-
-
-
-
-                                <?php  
-                                } ?>
-
+                                    
+                                   
+                        
 
 
                                         <br>
                                 <button type="submit" class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"> Actualizar Estado</button>
                                 </form>
-
-
-
-
-                          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -367,7 +305,7 @@ if ($queryconsulta) {
                                     </div>
                                 </div>
                                 <div class="grid grid-cols-2">
-                                    <div class="px-4 py-2 font-semibold">TIPO USUARIO</div>
+                                    <div class="px-4 py-2 font-semibold"></div> <!-- tipo de usuario-->
                                     <div class="px-4 py-2"><?php echo $usuarioTipoRespuesta; ?></div>
                                 </div>
                                 <div class="grid grid-cols-2">
