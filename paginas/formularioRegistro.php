@@ -141,6 +141,9 @@ if (isset($_SESSION['emailuser'])) {
                             <div class="py-1">
                                 <a href="../paginas/cerrarsesion.php" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">CERRAR SESIÓN</a>
                             </div>
+                            <div class="py-1">
+                                <a href="../paginas/eliminarcuenta.php" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Eliminar Cuenta</a>
+                            </div>
                         </div>
 
 

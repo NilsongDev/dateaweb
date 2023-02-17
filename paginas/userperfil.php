@@ -9,7 +9,7 @@ $filaDatosUser = pg_num_rows($consultaDatosUser);
 $queryconsulta = pg_query($conexion, $consulta);
 
 
-$id=intval($idsesion);
+$id = intval($idsesion);
 
 
 
@@ -71,7 +71,7 @@ if ($queryconsulta) {
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.5.0/dist/css/splide.min.css">
 
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -158,6 +158,7 @@ if ($queryconsulta) {
                                 <a class="block px-4 py-2 mt-2 text-sm bg-white md:mt-0 focus:text-gray-900 hover:bg-indigo-100 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="llenardatosperfil.php">ACTUALIZAR DATOS</a>
                                 <div class="border-b"></div>
                                 <a class="block px-4 py-2 mt-2 text-sm bg-white md:mt-0 focus:text-gray-900 hover:bg-indigo-100 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="cerrarsesion.php">CERRAR SESIÓN</a>
+
                             </div>
                         </div>
                     </div>
@@ -190,36 +191,36 @@ if ($queryconsulta) {
 
                                 <?php while ($estado = pg_fetch_assoc($consultaEstado)) {
                                     $estadoDisponible = $estado['estado_disponible'];
-                                }   
-                                
+                                }
+
                                 ?>
 
-                                    <?php
-                                    
-                                    
-                                    $estadoUSerDisponible = 1;
-                                    $estadoUSerNoDisponible= 2;
-                                    $resultadoEstado = intval($estadoDisponible); 
-                                    
-                                 
-                                    $resul=isset($_POST['estado_user']);
+                                <?php
 
-                    
-                               
-                               
-                          
-                                  // echo  "resultado while ".$resultadoEstado." resultado id".$idsesion ." resultado post ".$resul;
-                                    
+
+                                $estadoUSerDisponible = 1;
+                                $estadoUSerNoDisponible = 2;
+                                $resultadoEstado = intval($estadoDisponible);
+
+
+                                $resul = isset($_POST['estado_user']);
+
+
+
+
+
+                                // echo  "resultado while ".$resultadoEstado." resultado id".$idsesion ." resultado post ".$resul;
+
                                 ?>
 
 
-                                <h2>Tu estado es:<?php if($estadoDisponible== 1){
-                                    echo " DISPONIBLE";
-                                }elseif($estadoDisponible == 2){
-                                    echo " OCUPADO";
-                                } ?> </h2>
+                                <h2>Tu estado es:<?php if ($estadoDisponible == 1) {
+                                                        echo " DISPONIBLE";
+                                                    } elseif ($estadoDisponible == 2) {
+                                                        echo " OCUPADO";
+                                                    } ?> </h2>
 
-                                
+
 
 
 
@@ -231,26 +232,26 @@ if ($queryconsulta) {
 
 
                                 <form action="estadouser.php" method="POST">
-                                
-                             
+
+
 
                                     <li>
-                                        <div class="text-teal-600 "><input type="radio" class="text-green-500"   name="estado_user" id="" value="1"> Disponible</div>
+                                        <div class="text-teal-600 "><input type="radio" class="text-green-500" name="estado_user" id="" value="1"> Disponible</div>
                                     </li>
 
-                               
-                                   <li>
+
+                                    <li>
                                         <div class="text-teal-600"><input type="radio" class="text-red-500" name="estado_user" id="" value="2"> No Disponible</div>
                                     </li>
-                               
-
-                                    
-                                   
-                        
 
 
-                                        <br>
-                                <button type="submit" class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"> Actualizar Estado</button>
+
+
+
+
+
+                                    <br>
+                                    <button type="submit" class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"> Actualizar Estado</button>
                                 </form>
 
 
@@ -381,14 +382,103 @@ if ($queryconsulta) {
 
                                 </ul>
                             </div>
-                        
+
                         </div>
                         <!-- End of Experience and education grid -->
+
                     </div>
+
                 </div>
 
+
             </div>
+            <br><br>
+
+            <script>
+                $(function() {
+                    $(document).ready(function() {
+                        $('.fantasma').change(function() {
+                            if (!$(this).prop('checked')) {
+                                $('#dvOcultar').hide();
+
+                            } else {
+
+
+                                $('#dvOcultar').show();
+                            }
+
+                        })
+
+                    })
+                });
+            </script>
+
+
+
+            <script>
+                $(document).ready(function() {
+                    $('#dvOcultar').hide();
+                });
+            </script>
+
+
+
+
+
+            <script>
+                function eliminarcuenta(id) {
+                    alert('Eliminando cuenta ahora.');
+
+                    if (id === <?php echo $id ?>) {
+
+                        alert('Muchas Gracias.');
+                        
+
+
+                    }else{
+                        alert('no son iguales');
+                    }
+
+
+                }
+            </script>
+
+
+
+
+
+
+
+            <label for="cbmostrar">
+                <input type="checkbox" name="cbmostrar" class="fantasma" />
+                Desbloquear boton para eliminar cuenta
+
+
+            </label>
+            <div id="dvOcultar">
+
+            <form action="../paginas/eliminarcuenta.php" method="post">
+
+                <button type="submit" onclick="return eliminarcuenta(<?php echo $id ?>)" class=" float-right text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800"> ELIMINAR CUENTA</button>
+
+
+
+            </form>
+
+
+
+
+
+
+
+
+
+            </div>
+
+
+
         </div>
+        <br>
     </div>
     <?php
 
