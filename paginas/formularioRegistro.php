@@ -175,16 +175,7 @@ if (isset($_SESSION['emailuser'])) {
     </nav>
 
 
-    <script>
-        function pruebaemail(valor) {
-            re = /^([\da-z_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/
-            if (!re.exec(valor)) {
-                alert('email incompleto');
-            } else {
-                <?php $ruta = "validarformulario.php"; ?>
-            }
-        }
-    </script>
+
 
 
 
@@ -194,10 +185,24 @@ if (isset($_SESSION['emailuser'])) {
 
 
 
+    <script>
+        function pruebaemail(valor) {
+            re = /^([\da-z_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/
+            if (!re.exec(valor)) {
+                alert('email incompleto');
 
 
+               
+                return false;
+            } else {
+               <?php $ruta = "validarformulario.php"; ?>
+               return true;
+            }
+        }
+    </script>
+    
 
-
+  
 
     <div class="font-sans">
         <div class="relative p-20 flex flex-col sm:justify-center items-center ">
@@ -208,12 +213,13 @@ if (isset($_SESSION['emailuser'])) {
                     <label for="" class="block mt-3 text-sm text-gray-700 text-center font-semibold">
                         Registrate
                     </label>
+                    
                     <form method="POST" action="<?php echo $ruta; ?>" class="mt-10">
 
 
 
                         <div class="mt-7">
-                            <input type="email" placeholder="Correo electronico" name="emailUser" class="mt-1 block w-full border-none bg-gray-100 h-11 rounded-xl shadow-lg hover:bg-blue-100 focus:bg-blue-100 focus:ring-0">
+                            <input type="email" placeholder="Correo electronico" required name="emailUser" class="mt-1 block w-full border-none bg-gray-100 h-11 rounded-xl shadow-lg hover:bg-blue-100 focus:bg-blue-100 focus:ring-0">
                         </div>
 
                         <div class="mt-7">
@@ -227,7 +233,7 @@ if (isset($_SESSION['emailuser'])) {
 
 
                         <div class="mt-7">
-                            <button type="submit" onClick="pruebaemail(correo.value);" class="bg-blue-500 w-full py-3 rounded-xl text-white shadow-xl hover:shadow-inner focus:outline-none transition duration-500 ease-in-out  transform hover:-translate-x hover:scale-105">
+                            <button type="submit" onClick="return pruebaemail(emailUser.value);" class="bg-blue-500 w-full py-3 rounded-xl text-white shadow-xl hover:shadow-inner focus:outline-none transition duration-500 ease-in-out  transform hover:-translate-x hover:scale-105">
                                 Registrar
                             </button>
                         </div>
@@ -368,6 +374,8 @@ if (isset($_SESSION['emailuser'])) {
         </div>
     </footer>
 
+  
+    
 
 
 

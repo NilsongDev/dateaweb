@@ -1,4 +1,5 @@
 <?php 
+header('Cache-Control: no cache'); //no cache
 
 session_start();
 error_reporting(0);
@@ -94,6 +95,8 @@ if(isset($_POST['check'])){
     $resultado1 = pg_query($conexion, $select2);
 
     //header("refresh:1;url=index.php");
+}else{
+    header("refresh:1;url=categoriaConsulta.php");
 }
 
 
@@ -398,8 +401,7 @@ if(isset($_POST['check'])){
     </div>
 
 
-
-
+   
 
 
 
