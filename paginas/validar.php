@@ -18,7 +18,11 @@ if ($fila) {
 
   
 
+//aqui se busca la encryptacion del password que se paresca
 
+//y se captura el password sin encryptar ingresado de manera numerica o string
+
+//se transforma y encrypta para luego comparar con el ingresado.
 
 
 

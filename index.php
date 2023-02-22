@@ -567,11 +567,24 @@ if(isset($_SESSION['emailuser'])){
 
 
     <br>
+                        <?php 
+                        
+                        //$consultaRegistros = "SELECT count(idlogin)  from loginuser";
+ $consultaRegistros = "SELECT * FROM loginuser";
 
 
+                        $totalRegistros = pg_query($conexion, $consultaRegistros);
+                      
+                        
+                   $res= pg_num_rows($totalRegistros); 
+                  
+                        ?>
 
-
-
+    <br>
+    
+    <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none   md:text-5xl lg:text-6xl text-blue-600 dark:text-blue-500">Total Registrados : <?php echo $res; ?> </h1>
+  
+<br>
 
     <!-- Pie de pag -->
     <footer class="p-4 bg-white sm:p-6 dark:bg-gray-900 ">

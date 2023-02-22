@@ -23,6 +23,7 @@ if(pg_num_rows($res)>0){
 
 }
 
+//comenzar aqui con el inicio de encryptacion del password 1 y 2
 
 
 
