@@ -8,7 +8,36 @@ $_SESSION['user'] = $usuario;
 $conexion = pg_connect("host=localhost dbname=postgres user=postgres password=0988");
 
 
-$consulta = "SELECT * FROM loginuser WHERE username='$usuario' AND password1='$password'";
+
+
+$dato = $password;
+
+
+
+ //Metodo de encriptaciÃ³n
+ $method = 'aes-256-cbc';
+ // Puedes generar una diferente usando la funcion $getIV()
+ $iv = base64_decode("C9fBxl1EWtYTL1/M8jfstw==");
+ 
+ /*
+ Encripta el contenido de la variable, enviada como parametro.
+ */
+ $encriptar = function ($valor) use ($method, $dato, $iv) {
+     return openssl_encrypt ($valor, $method, $dato, false, $iv);
+ };
+
+ //Encripta informaciÃ³n:
+ $dato_encriptado = $encriptar($dato);
+
+
+
+
+
+
+
+
+
+$consulta = "SELECT * FROM loginuser WHERE username='$usuario' AND password1='$dato_encriptado'";
 
 $rs = pg_query($conexion, $consulta);
 

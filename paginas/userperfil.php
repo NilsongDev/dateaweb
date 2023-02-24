@@ -65,7 +65,7 @@ if ($queryconsulta) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bienvenido DATEA</title>
-    <link rel="stylesheet" href="componentes/css/stylePublicidad.css">
+    <link rel="stylesheet" href="../componentes/css/stylePublicidad.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.3/dist/flowbite.min.css" />
 
@@ -75,7 +75,61 @@ if ($queryconsulta) {
 </head>
 
 <body>
+<div id="primerAnuncio" class="anuncio">
+        <div class="FollowUs" style="display: block;">
+            <div class="Container">
+                <div class="close-dv">
+                    <button id="closesocial" class="close-social"><i class="fa-sharp fa-solid fa-circle-xmark fa-3x"> </i></button>
+                </div>
+                <aside style="text-align:center">
+                    <div class="ttl">
+                        <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none  md:text-5xl lg:text-6xl text-blue-600 dark:text-blue-500">Recuerda Actualizar Tus Datos.</h1>
+                    </div>
+                    <p class="text-lg font-bold dark:text-gray-400 text-gray-500">Forma Parte De Nuestra Comunidad de Datea.cl en nuestras Redes Sociales</p> <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" )> <a href="llenardatosperfil.php">Actualizar Datos</a> </button>
+                </aside>
+                <ul>
+                    <li class="fcb">
+                        <a href="https://www.facebook.com/profile.php?id=100087575364005" target="_blank">
+                            <i class="fa-brands fa-facebook"></i>
+                            <span>Datea.cl</span>
+                        </a>
+                    </li>
+                    <li class="twt">
+                        <a href="https://twitter.com/datea_cl" target="_blank">
+                            <i class="fa-brands fa-square-twitter"></i>
+                            <span>Datea.cl</span>
+                        </a>
+                    </li>
+                    <li class="nst">
+                        <a href="https://www.instagram.com/datea.cl/" target="_blank">
+                            <i class="fa-brands fa-square-instagram"></i>
+                            <span>Datea.cl</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
 
+
+
+    <script>
+        window.onload = function() {
+            document.getElementById('closesocial').onclick = function() {
+                this.parentNode.parentNode.parentNode
+                    .removeChild(this.parentNode.parentNode);
+                return false;
+            };
+        };
+    </script>
+
+
+
+    <style>
+        li {
+            list-style: none
+        }
+    </style>
     <nav class="bg-white px-2 sm:px-4 py-2.5 dark:bg-gray-900  w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600">
         <div class="container flex flex-wrap justify-between items-center mx-auto">
             <a href="../index.php" class="flex items-center">

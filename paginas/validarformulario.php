@@ -33,6 +33,13 @@ if(pg_num_rows($res)>0){
 
 
 
+
+
+
+
+
+
+
 ?> <html>
 
 <head>
@@ -79,15 +86,38 @@ if(pg_num_rows($res)>0){
 
         <?php
 
+            //aqui se cambia los valores de cryp
+                        $dato = $passUsuario1;
+
+            //Metodo de encriptaciÃ³n
+            $method = 'aes-256-cbc';
+            // Puedes generar una diferente usando la funcion $getIV()
+            $iv = base64_decode("C9fBxl1EWtYTL1/M8jfstw==");
+            
+            /*
+            Encripta el contenido de la variable, enviada como parametro.
+            */
+            $encriptar = function ($valor) use ($method, $dato, $iv) {
+                return openssl_encrypt ($valor, $method, $dato, false, $iv);
+            };
+
+            //Encripta informaciÃ³n:
+            $dato_encriptado = $encriptar($dato);
+            
+
+
+
+
+
 
 
         echo "USUARIO AGREGADO";
-        $consulta = "INSERT INTO loginuser (username,password1,password2) Values ('$emailUsuario','$passUsuario1','$passUsuario2')";
+        $consulta = "INSERT INTO loginuser (username,password1,password2) Values ('$emailUsuario','$dato_encriptado ','$dato_encriptado ')";
         $resultado = pg_query($conexion, $consulta);
 
 
 
-        $consultaID = "SELECT * FROM loginuser WHERE username='$emailUsuario' AND password1='$passUsuario1'";
+        $consultaID = "SELECT * FROM loginuser WHERE username='$emailUsuario' AND password1='$dato_encriptado '";
         $respuestaID = pg_query($conexion, $consultaID);
 
         if ($respuestaID) {

@@ -320,7 +320,7 @@ if(isset($_SESSION['emailuser'])){
                         ?>
                                 <li class="splide__slide">
                                     <div class="cardperfil"><img src="componentes/images/perfil_user.jpg" alt="ichabod">
-                                        <div class="cardperfil-detalles"><strong>Nombre: <?php echo $row["nombreuser"] . "" . $row["apellidouser"]; ?></strong><span></span><br><span>Ciudad: <?php echo $row["comunausuario"]; ?> <br> Ofico: <?php echo  $row["nombre_oficio"];?> <br> telefono: <?php echo  "+569"." ".$row["telefonouser"];?> </span></div>
+                                        <div class="cardperfil-detalles"><strong>Nombre: <?php echo $row["nombreuser"] . "" . $row["apellidouser"]; ?></strong><span></span><br><span>Ciudad: <?php echo $row["comunausuario"]; ?> <br> Ofico: <?php echo  $row["nombre_oficio"];?> <br> telefono:  <a href="https://api.whatsapp.com/send?phone=+569<?php  echo $row["telefonouser"];?>&text=<?php echo "hola"; ?>a%20s."> <?php echo"+569 ".  $row["telefonouser"]; ?></a> </span></div>
                                     </div>
                                 </li>
 
@@ -509,6 +509,7 @@ if(isset($_SESSION['emailuser'])){
 
 
 
+    
 
 
 
@@ -543,7 +544,7 @@ if(isset($_SESSION['emailuser'])){
                         ?>
                                 <li class="splide__slide">
                                     <div class="cardperfil"><img src="componentes/images/perfil_user.jpg" alt="ichabod">
-                                        <div class="cardperfil-detalles"><strong>Nombre: <?php echo $row["nombreuser"] . "" . $row["apellidouser"]; ?></strong><span><br> Ciudad: <?php echo $row["comunausuario"]; ?> <br> Oficio: <?php echo $row["nombre_oficio"];?> <br> Telefono: <?php echo "+569"." ".$row["telefonouser"];?></span></div>
+                                        <div class="cardperfil-detalles"><strong>Nombre: <?php echo $row["nombreuser"] . "" . $row["apellidouser"]; ?></strong><span><br> Ciudad: <?php echo $row["comunausuario"]; ?> <br> Oficio: <?php echo $row["nombre_oficio"];?> <br>  <a href="https://api.whatsapp.com/send?phone=+569<?php echo $row["telefonouser"];?>&text=<?php echo "hola"; ?>a%20s."> <?php echo"+569 ". $row["telefonouser"];?></a> </span></div>
                                     </div>
                                 </li>
 

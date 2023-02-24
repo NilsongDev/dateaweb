@@ -191,13 +191,15 @@ if (isset($_SESSION['emailuser'])) {
         .containerperfil {
 
             margin: 5rem;
+           
         }
-
+/* div para editar perfil de usuario */
         .contenedorli {
             margin-bottom: 4rem;
-            background-color: antiquewhite;
+            background-color: #FFF1DC;
             text-align: center;
             padding: 1rem;
+            border-radius: 25px;
         }
 
         .perfiluser {
@@ -225,7 +227,7 @@ if (isset($_SESSION['emailuser'])) {
 
             <?php
 
-            $porpaginas = 10;
+            $porpaginas = 12;
             if (isset($_GET['pagina'])) {
                 $pagina = $_GET['pagina'];
             } else {
@@ -264,9 +266,9 @@ if (isset($_SESSION['emailuser'])) {
 
                 <li class="contenedorli">
                     <div class="textoperfil">
-                        <h1 class="mb-4 text-xl tracking-tight leading-none   text-blue-600 dark:text-blue-500">Nombre : <?php echo $nombreuser . " " . $apellidouser; ?></h1>
-                        <h3 class="mb-4 text-xl tracking-tight leading-none   text-blue-600 dark:text-blue-500">Telefono : +56<?php echo $telefonouser; ?></h3>
-                        <h3 class="mb-4 text-xl  tracking-tight leading-none   text-blue-600 dark:text-blue-500">Comuna: <?php echo $comunauser; ?></h3>
+                        <h1 class="mb-4 text-xl tracking-tight leading-none   text-blue-600 dark:text-blue-500"><i class='fas fa-portrait' style='font-size:48px;color:#33B2FF '></i> <?php echo $nombreuser . " " . $apellidouser; ?></h1>
+                        <h3 class="mb-4 text-xl tracking-tight leading-none   text-blue-600 dark:text-blue-500"><i class="fa fa-whatsapp" style="font-size:48px;color:green"></i> <a href="https://api.whatsapp.com/send?phone=+569<?php echo $telefonouser;?>; ?>&text=<?php echo "Holaa  $nombreuser visto por Datea.cl"; ?>."> +569-<?php echo $telefonouser;?></a></h3>
+                        <h3 class="mb-4 text-xl  tracking-tight leading-none   text-blue-600 dark:text-blue-500"><i class='fas fa-map-marker-alt' style='font-size:36px;color:#33B2FF '></i><?php echo $comunauser; ?></h3>
                     </div>
 
                     <div class="relative perfilselect">
