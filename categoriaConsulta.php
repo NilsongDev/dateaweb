@@ -364,23 +364,23 @@ if(isset($_POST['check'])){
 
                 <li class="contenedorli">
                     <div class="textoperfil">
-                        <h1 class="mb-4 text-xl tracking-tight leading-none   text-blue-600 dark:text-blue-500"><i class='fas fa-portrait' style='font-size:48px;color:#33B2FF '></i> <?php echo $nombreuser . " " . $apellidouser; ?></h1>
-                        <h3 class="mb-4 text-xl tracking-tight leading-none   text-blue-600 dark:text-blue-500"><i class="fa fa-whatsapp" style="font-size:48px;color:green"></i> <a href="https://api.whatsapp.com/send?phone=+569<?php  echo $telefonouser;?>&text=<?php echo "hola"; ?>a%20s."> <?php echo"+569 ".  $telefonouser; ?></a></h3>
-                        <h3 class="mb-4 text-xl  tracking-tight leading-none   text-blue-600 dark:text-blue-500"><i class='fas fa-map-marker-alt' style='font-size:36px;color:#33B2FF '></i> <?php echo $comunauser; ?></h3>
+                        <h1 class="mb-4 text-xl tracking-tight leading-none   text-blue-600 dark:text-blue-500"><i class='fas fa-portrait' style='font-size:36px;color:#33B2FF ;float: left;'></i> <?php echo $nombreuser . " " . $apellidouser; ?></h1><br>
+                        <h3 class="mb-4 text-xl tracking-tight leading-none   text-blue-600 dark:text-blue-500"><i class="fa fa-whatsapp" style="font-size:36px;color:green;float: left;"></i> <a href="https://api.whatsapp.com/send?phone=+569<?php  echo $telefonouser;?>&text=<?php echo "hola"; ?>a%20s."> <?php echo"+569 ".  $telefonouser; ?></a></h3><br>
+                        <h3 class="mb-4 text-xl  tracking-tight leading-none   text-blue-600 dark:text-blue-500"><i class='fas fa-map-marker-alt' style='font-size:36px;color:#33B2FF ;float: left;'></i> <?php echo $comunauser; ?></h3><br>
                       
                     </div>
 
-                    <div class="relative perfilselect">
-                        <img class="w-36 h-36  rounded-full" src="./componentes/images/logoTrabajador.png" alt="">
+                    <div class="relative perfilselect" style="background-color: #FEFCF3; padding: 10px 10px; border-radius: 10px;">
+                        <img class="w-36 h-36  rounded-full" src="./componentes/images/logoTrabajador.png" alt="" >
                         <?php if(intval($estado)==1 ){  ?>
                         <span class="top-0 left-7 absolute  w-3.5 h-3.5 bg-green-400 border-2 border-white dark:border-gray-800 rounded-full"></span>
                         <?php   }else{    ?>
 
                             <span class="top-0 left-7 absolute  w-3.5 h-3.5 bg-red-400 border-2 border-white dark:border-gray-800 rounded-full"></span>   
                         
-                            <?php }?>
-                        <h3 class="mb-4 text-xl tracking-tight leading-none   text-blue-600 dark:text-blue-500">Descripcion: <?php echo $descripcionUser; ?></h3>
-                        <h3 class="mb-4 text-xl tracking-tight leading-none   text-blue-600 dark:text-blue-500">Oficio: <?php echo $oficio; ?></h3>
+                            <?php }?><br>
+                        <h3 class="mb-4 text-xl tracking-tight leading-none   text-blue-600 dark:text-blue-500">Descripción: <?php echo $descripcionUser; ?></h3>
+                        <h3 class="mb-4 text-xl tracking-tight leading-none   text-blue-600 dark:text-blue-500"><i class='fas fa-hard-hat' style='font-size:24px;color:#F2CD5C;float: left;'></i>  <?php echo $oficio; ?></h3>
                     </div>
 
 

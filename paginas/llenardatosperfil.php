@@ -301,7 +301,7 @@ $ceramista="Ceramista";
 
                                     <div class="grid grid-cols-2">
                                             <div class="px-4 py-2 font-semibold">NÚMERO CONTACTO</div>
-                                            <div class="px-4 py-2"><input type="text" name="telefonousuario" maxlength="8" value="<?php echo $telefonoUsuario;  ?>"> </div>
+                                            <div class="px-4 py-2"><input type="text" name="telefonousuario" pattern="[0-9]+" minlength="8" maxlength="8" value="<?php echo $telefonoUsuario;  ?>" onKeypress="if (event.keyCode < 45 || event.keyCode > 57) event.returnValue = false;"> </div>
                                         </div>
 
                                   

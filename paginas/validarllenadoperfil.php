@@ -189,11 +189,12 @@ if($res ){
             text: 'algo ocurrio!',
             showConfirmButton: false,
             
+            
         })
     </script>
-
+    
 <?php
-
+header("refresh:1;url=userperfil.php");
 
 
 
