@@ -106,3 +106,12 @@ splide.mount();
 
 
 
+document.addEventListener('DOMContentLoaded', function () {
+let figure = document.getElementById('photo');
+let directions = document.getElementById('directions');
+
+directions.addEventListener('change', function () {
+figure.setAttribute('tooltip-dir', this.value);
+});
+});
+

@@ -320,7 +320,7 @@ if(isset($_SESSION['emailuser'])){
                         ?>
                                 <li class="splide__slide">
                                     <div class="cardperfil"><img src="componentes/images/perfil_user.jpg" alt="ichabod">
-                                        <div class="cardperfil-detalles"><strong>Nombre: <?php echo $row["nombreuser"] . "" . $row["apellidouser"]; ?></strong><span></span><br><span>Ciudad: <?php echo $row["comunausuario"]; ?> <br> Ofico: <?php echo  $row["nombre_oficio"];?> <br> telefono:  <a href="https://api.whatsapp.com/send?phone=+569<?php  echo $row["telefonouser"];?>&text=<?php echo "hola"; ?>a%20s."> <?php echo"+569 ".  $row["telefonouser"]; ?></a> </span></div>
+                                        <div class="cardperfil-detalles"><strong>Nombre: <?php echo ucfirst($row["nombreuser"])  . "" . ucfirst($row["apellidouser"]) ; ?></strong><span></span><br><span>Comuna: <?php echo $row["comunausuario"]; ?> <br> Oficio: <?php echo ucfirst($row["nombre_oficio"]) ;?> <br> Telefono:  <a href="https://api.whatsapp.com/send?phone=+569<?php  echo $row["telefonouser"];?>&text=<?php echo "Hola ".ucfirst($row["nombreuser"]). " ".ucfirst($row["apellidouser"])." de Datea.cl, consulto disponibilidad de trabajo."; ?>"> <?php echo"+569 ".  $row["telefonouser"]; ?></a> </span></div>
                                     </div>
                                 </li>
 
@@ -372,7 +372,7 @@ if(isset($_SESSION['emailuser'])){
                     <div class="perfilselect">
                         <input type="radio" id="myCheckbox8" name="check" value="1" />
                         <label for="myCheckbox8"><img src="componentes/images/logoTrabajador.png" /></label>
-                        <h1> Pintor</h1>
+                        <strong><h1> Pintor</h1></strong>
                     </div>
 
 
@@ -381,7 +381,7 @@ if(isset($_SESSION['emailuser'])){
                     <div class="perfilselect">
                         <input type="radio" id="myCheckbox7" name="check" value="2"/>
                         <label for="myCheckbox7"><img src="componentes/images/logoTrabajador.png" /></label>
-                        <h1> Soldador</h1>
+                        <strong><h1> Soldador</h1></strong>
                     </div>
 
 
@@ -390,7 +390,7 @@ if(isset($_SESSION['emailuser'])){
                     <div class="perfilselect">
                         <input type="radio" id="myCheckbox6" name="check" value="3"/>
                         <label for="myCheckbox6"><img src="componentes/images/logoTrabajador.png" /></label>
-                        <h1> Gasfiter</h1>
+                        <strong><h1> Gasfiter</h1></strong>
                     </div>
 
 
@@ -399,7 +399,7 @@ if(isset($_SESSION['emailuser'])){
                     <div class="perfilselect">
                         <input type="radio" id="myCheckbox5" name="check" value="4" />
                         <label for="myCheckbox5"><img src="componentes/images/logoTrabajador.png" /></label>
-                        <h1> Carpintero</h1>
+                        <strong><h1> Carpintero</h1></strong>
                     </div>
                 </div>
 
@@ -413,7 +413,7 @@ if(isset($_SESSION['emailuser'])){
                     <div class="perfilselect">
                         <input type="radio" id="myCheckbox4" name="check" value="5"/>
                         <label for="myCheckbox4"><img src="componentes/images/logoTrabajador.png" /></label>
-                        <h1> Albañil</h1>
+                        <strong><h1> Albañil</h1></strong>
                     </div>
 
 
@@ -422,14 +422,14 @@ if(isset($_SESSION['emailuser'])){
                     <div class="perfilselect">
                         <input type="radio" id="myCheckbox3" name="check" value="6" />
                         <label for="myCheckbox3"><img src="componentes/images/logoTrabajador.png" /></label>
-                        <h1> Ceramista</h1>
+                        <strong><h1> Ceramista</h1></strong>
                     </div>
 
                     <div class="perfilselect">
                         <input type="radio" id="myCheckbox1" name="check" value="7" />
 
                         <label for="myCheckbox1"><img src="componentes/images/logoTrabajador.png" /></label>
-                        <h1>Electrico</h1>
+                        <strong><h1>Eléctrico</h1></strong>
 
 
                     </div>
@@ -439,7 +439,7 @@ if(isset($_SESSION['emailuser'])){
                         <input type="radio" id="myCheckbox2" name="check" value="8" />
 
                         <label for="myCheckbox2"><img src="componentes/images/logoTrabajador.png" /></label>
-                        <h1>Estructurero</h1>
+                        <strong><h1>Estructurero</h1></strong>
                     </div>
 
 
@@ -448,9 +448,11 @@ if(isset($_SESSION['emailuser'])){
 
 
                 <div class="regiones">
-                    <h1>SELECCIONAR COMUNA</h1>
-                    <select class="names regg container p-3 m-6" name="comunas">
-                        <option value="Concepcion">Concepción</option>
+                    
+                    <h1 class="mb-2 text-4xl  tracking-tight leading-none   md:text-5xl lg:text-6xl text-blue-600 dark:text-blue-500">Seleccionar Comuna</h1>
+
+                    <select class="names regg container p-3 m-6"  name="comunas">
+                      <option value="Concepcion"> Concepción</option>
                         <option value="Coronel">Coronel</option>
                         <option value="Chiguayante">Chiguayante</option>
                         <option value="Florida">Florida</option>
@@ -543,8 +545,8 @@ if(isset($_SESSION['emailuser'])){
                                 $row["nombre_oficio"];
                         ?>
                                 <li class="splide__slide">
-                                    <div class="cardperfil"><img src="componentes/images/perfil_user.jpg" alt="ichabod">
-                                        <div class="cardperfil-detalles"><strong>Nombre: <?php echo $row["nombreuser"] . "" . $row["apellidouser"]; ?></strong><span><br> Ciudad: <?php echo $row["comunausuario"]; ?> <br> Oficio: <?php echo $row["nombre_oficio"];?> <br>  <a href="https://api.whatsapp.com/send?phone=+569<?php echo $row["telefonouser"];?>&text=<?php echo "hola"; ?>a%20s."> <?php echo"+569 ". $row["telefonouser"];?></a> </span></div>
+                                    <div class="cardperfil"><img src="componentes/images/perfil_user.jpg" alt="ichabod"> 
+                                        <div class="cardperfil-detalles"><strong>Nombre: <?php echo ucfirst($row["nombreuser"])  . " " . ucfirst($row["apellidouser"]) ; ?> </strong><span><br> Comuna: <?php echo $row["comunausuario"]; ?> <br> Oficio: <?php echo ucfirst($row["nombre_oficio"]) ;?> <br>  <a href="https://api.whatsapp.com/send?phone=+569<?php echo $row["telefonouser"];?>&text=<?php echo "Hola ".ucfirst($row["nombreuser"])."".ucfirst($row["apellidouser"]). " de Datea.cl, consulto disponibilidad de trabajo."; ?>"> <strong>  <?php echo"+569 ". $row["telefonouser"];?></strong> </a> </span></div>
                                     </div>
                                 </li>
 
@@ -583,7 +585,7 @@ if(isset($_SESSION['emailuser'])){
 
     <br>
     
-    <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none   md:text-5xl lg:text-6xl text-blue-600 dark:text-blue-500">Total Registrados : <?php echo $res; ?> </h1>
+    <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none   md:text-5xl lg:text-6xl text-blue-600 dark:text-blue-500">Total Registrados en Datea.cl : <?php echo $res; ?> </h1>
   
 <br>
 

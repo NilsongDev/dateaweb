@@ -269,12 +269,13 @@ if (isset($_SESSION['emailuser'])) {
 
                 <li class="contenedorli">
                     <div class="textoperfil">
-                        <h1 class="mb-4 text-xl tracking-tight leading-none   text-blue-600 dark:text-blue-500"><i class='fas fa-portrait' style='font-size:36px;color:#33B2FF ;float: left;'></i> <?php echo $nombreuser . " " . $apellidouser; ?></h1><br>
-                        <h3 class="mb-4 text-xl tracking-tight leading-none   text-blue-600 dark:text-blue-500"><i class="fa fa-whatsapp" style="font-size:36px;color:green;float: left;"></i> <a href="https://api.whatsapp.com/send?phone=+569<?php echo $telefonouser;?>; ?>&text=<?php echo "Holaa  $nombreuser visto por Datea.cl"; ?>."> +569-<?php echo $telefonouser;?></a></h3><br>
-                        <h3 class="mb-4 text-xl  tracking-tight leading-none   text-blue-600 dark:text-blue-500"><i class='fas fa-map-marker-alt' style='font-size:36px;color:#33B2FF ;float: left;'></i><?php echo $comunauser; ?></h3><br>
+                        <h1 class="mb-4 text-xl tracking-tight leading-none   text-blue-600 dark:text-blue-500"><i class='fas fa-portrait' style='font-size:36px;color:#33B2FF ;float: left;'></i> <strong> <?php echo ucfirst($nombreuser)  . " " . ucfirst($apellidouser) ; ?></strong> </h1><br>
+                        <h3 class="mb-4 text-xl tracking-tight leading-none   text-blue-600 dark:text-blue-500"><i class="fa fa-whatsapp" style="font-size:36px;color:green;float: left;"></i> <a href="https://api.whatsapp.com/send?phone=+569<?php echo $telefonouser;?>; ?>&text=<?php echo "Hola,  ". ucfirst($nombreuser)." ".ucfirst($apellidouser)  ." de Datea.cl, consulto disponibilidad de trabajo."; ?>."> <strong> +569-<?php echo $telefonouser;?></strong></a></h3><br>
+                        <h3 class="mb-4 text-xl  tracking-tight leading-none   text-blue-600 dark:text-blue-500"><i class='fas fa-map-marker-alt' style='font-size:36px;color:#33B2FF ;float: left;'></i><strong> <?php echo $comunauser; ?></strong></h3><br>
                     </div>
 
                     <div class="relative perfilselect" style="background-color: #FEFCF3; padding: 10px 10px; border-radius: 10px;">
+                    <figure id="photo" title="<?PHP if($estado==1){ echo "Disponible";}elseif($estado==2){ echo "Ocupado";}  ?>" tooltip-dir="left">
                         <img class="w-36 h-36  rounded-full" src="./componentes/images/logoTrabajador.png" style="margin-left: 40px;" alt="">
 
                         <?php if (intval($estado) == 1) { ?>
@@ -286,8 +287,9 @@ if (isset($_SESSION['emailuser'])) {
                         <?php } ?>
 
                             <br>
+                            </figure> 
                         <h3 class="mb-4 text-xl tracking-tight leading-none   text-blue-600 dark:text-blue-500">Descripción: <?php echo $descripcionUser; ?></h3>
-                        <h3 class="mb-4 text-xl tracking-tight leading-none   text-blue-600 dark:text-blue-500"><i class='fas fa-hard-hat' style='font-size:24px;color:#F2CD5C;float: left;'></i> <?php echo $oficio; ?></h3>
+                        <h3 class="mb-4 text-xl tracking-tight leading-none   text-blue-600 dark:text-blue-500"><i class='fas fa-hard-hat' style='font-size:24px;color:#F2CD5C;float: left;'></i> <strong><?php echo $oficio; ?></strong></h3>
                     </div>
 
 

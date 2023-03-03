@@ -91,7 +91,7 @@ if(isset($_POST['check'])){
 }elseif($_POST['comunas']== "Concepcion" || $_POST['comunas']== "Coronel" || $_POST['comunas']== "Chiguayante" ||$_POST['comunas']== "Florida" || $_POST['comunas']== "Hualqui" || $_POST['comunas']== "Lota" || $_POST['comunas']== "Penco" || $_POST['comunas']== "San_pedro" ||$_POST['comunas']== "Santa_juana" || $_POST['comunas']== "Talcahuano" || $_POST['comunas']== "Tome" ||$_POST['comunas']== "Hualpen"){
     $resultadoComuna=$_POST['comunas'];
         
-    $select2 = "SELECT * from perfilusuario inner join oficio_user on oficio_user.fk_oficio_user = perfilusuario.codigologin inner join estado_user on estado_user.estado_fk=perfilusuario.codigologin where comunausuario = '$resultadoComuna' ";
+    $select2 = "SELECT * from perfilusuario inner join oficio_user on oficio_user.fk_oficio_user = perfilusuario.codigologin inner join estado_user on estado_user.estado_fk=perfilusuario.codigologin where comunausuario like '%$resultadoComuna%' ";
     $resultado1 = pg_query($conexion, $select2);
 
     //header("refresh:1;url=index.php");
@@ -361,26 +361,28 @@ if(isset($_POST['check'])){
 
 
             ?>
-
+          
                 <li class="contenedorli">
                     <div class="textoperfil">
-                        <h1 class="mb-4 text-xl tracking-tight leading-none   text-blue-600 dark:text-blue-500"><i class='fas fa-portrait' style='font-size:36px;color:#33B2FF ;float: left;'></i> <?php echo $nombreuser . " " . $apellidouser; ?></h1><br>
-                        <h3 class="mb-4 text-xl tracking-tight leading-none   text-blue-600 dark:text-blue-500"><i class="fa fa-whatsapp" style="font-size:36px;color:green;float: left;"></i> <a href="https://api.whatsapp.com/send?phone=+569<?php  echo $telefonouser;?>&text=<?php echo "hola"; ?>a%20s."> <?php echo"+569 ".  $telefonouser; ?></a></h3><br>
-                        <h3 class="mb-4 text-xl  tracking-tight leading-none   text-blue-600 dark:text-blue-500"><i class='fas fa-map-marker-alt' style='font-size:36px;color:#33B2FF ;float: left;'></i> <?php echo $comunauser; ?></h3><br>
+                        <h1 class="mb-4 text-xl tracking-tight leading-none   text-blue-600 dark:text-blue-500"><i class='fas fa-portrait' style='font-size:36px;color:#33B2FF ;float: left;'></i> <strong> <?php echo ucfirst($nombreuser ) . " " . ucfirst($apellidouser) ; ?> </strong></h1><br>
+                        <h3 class="mb-4 text-xl tracking-tight leading-none   text-blue-600 dark:text-blue-500"><i class="fa fa-whatsapp" style="font-size:36px;color:green;float: left;"></i> <a href="https://api.whatsapp.com/send?phone=+569<?php  echo $telefonouser;?>&text=<?php echo "hola, ".$nombreuser; ?>a%20s."> <strong> <?php echo"+569 ".  $telefonouser; ?></strong></a></h3><br>
+                        <h3 class="mb-4 text-xl  tracking-tight leading-none   text-blue-600 dark:text-blue-500"><i class='fas fa-map-marker-alt' style='font-size:36px;color:#33B2FF ;float: left;'></i> <strong><?php echo $comunauser; ?></strong></h3><br>
                       
                     </div>
 
-                    <div class="relative perfilselect" style="background-color: #FEFCF3; padding: 10px 10px; border-radius: 10px;">
-                        <img class="w-36 h-36  rounded-full" src="./componentes/images/logoTrabajador.png" alt="" >
+                    <div class="relative perfilselect " style="background-color: #FEFCF3; padding: 10px 10px; border-radius: 10px;">
+                        <figure id="photo" title="<?PHP if($estado==1){ echo "Disponible";}elseif($estado==2){ echo "Ocupado";}  ?>" tooltip-dir="left">
+                        <img class="w-36 h-36  rounded-full" src="./componentes/images/logoTrabajador.png" style="margin-left: 40px;" alt="" >
                         <?php if(intval($estado)==1 ){  ?>
-                        <span class="top-0 left-7 absolute  w-3.5 h-3.5 bg-green-400 border-2 border-white dark:border-gray-800 rounded-full"></span>
+                        <span class="estado top-5 left-12 absolute  w-3.5 h-3.5 bg-green-400 border-2 border-white dark:border-gray-800 rounded-full"></span>
                         <?php   }else{    ?>
 
-                            <span class="top-0 left-7 absolute  w-3.5 h-3.5 bg-red-400 border-2 border-white dark:border-gray-800 rounded-full"></span>   
+                            <span class="top-5 left-12 absolute  w-3.5 h-3.5 bg-red-400 border-2 border-white dark:border-gray-800 rounded-full"></span>   
                         
                             <?php }?><br>
+                            </figure> 
                         <h3 class="mb-4 text-xl tracking-tight leading-none   text-blue-600 dark:text-blue-500">Descripción: <?php echo $descripcionUser; ?></h3>
-                        <h3 class="mb-4 text-xl tracking-tight leading-none   text-blue-600 dark:text-blue-500"><i class='fas fa-hard-hat' style='font-size:24px;color:#F2CD5C;float: left;'></i>  <?php echo $oficio; ?></h3>
+                        <h3 class="mb-4 text-xl tracking-tight leading-none   text-blue-600 dark:text-blue-500"><i class='fas fa-hard-hat' style='font-size:24px;color:#F2CD5C;float: left;'></i>  <strong><?php echo $oficio; ?></strong></h3>
                     </div>
 
 
@@ -402,7 +404,7 @@ if(isset($_POST['check'])){
     </div>
 
 
-   
+
 
 
 

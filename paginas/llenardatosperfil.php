@@ -340,7 +340,7 @@ $ceramista="Ceramista";
                             <h1>SELECCIONAR COMUNA</h1>
                             <select class="names regg container p-3 m-6" name="comunas">
                                 <option name="comunausuario" value="">Seleccionar Comuna</option>
-                                <option name="comunausuario" value="Concepcion">Concepcion</option>
+                                <option name="comunausuario" value="Concepcion">Concepción</option>
                                 <option name="comunausuario" value="Coronel">Coronel</option>
                                 <option name="comunausuario" value="Chiguayante">Chiguayante</option>
                                 <option name="comunausuario" value="Florida">Florida</option>

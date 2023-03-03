@@ -401,11 +401,6 @@ if ($queryconsulta) {
 
 
 
-
-
-
-
-
                     <div class="bg-white p-3 shadow-sm rounded-sm">
 
                         <div class="grid grid-cols-2">
@@ -426,28 +421,15 @@ if ($queryconsulta) {
 
                                     </li>
 
-
-
-
-
-
-
-
-
                                 </ul>
                             </div>
 
                         </div>
-                        <!-- End of Experience and education grid -->
-
+                       <!-- End of Experience and education grid -->
                     </div>
-
                 </div>
-
-
             </div>
             <br><br>
-
             <script>
                 $(function() {
                     $(document).ready(function() {
@@ -457,7 +439,6 @@ if ($queryconsulta) {
 
                             } else {
 
-
                                 $('#dvOcultar').show();
                             }
 
@@ -466,19 +447,11 @@ if ($queryconsulta) {
                     })
                 });
             </script>
-
-
-
             <script>
                 $(document).ready(function() {
                     $('#dvOcultar').hide();
                 });
             </script>
-
-
-
-
-
             <script>
                 function eliminarcuenta(id) {
                     alert('Eliminando cuenta ahora.');
