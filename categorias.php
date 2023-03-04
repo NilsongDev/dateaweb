@@ -270,13 +270,13 @@ if (isset($_SESSION['emailuser'])) {
                 <li class="contenedorli">
                     <div class="textoperfil">
                         <h1 class="mb-4 text-xl tracking-tight leading-none   text-blue-600 dark:text-blue-500"><i class='fas fa-portrait' style='font-size:36px;color:#33B2FF ;float: left;'></i> <strong> <?php echo ucfirst($nombreuser)  . " " . ucfirst($apellidouser) ; ?></strong> </h1><br>
-                        <h3 class="mb-4 text-xl tracking-tight leading-none   text-blue-600 dark:text-blue-500"><i class="fa fa-whatsapp" style="font-size:36px;color:green;float: left;"></i> <a href="https://api.whatsapp.com/send?phone=+569<?php echo $telefonouser;?>; ?>&text=<?php echo "Hola,  ". ucfirst($nombreuser)." ".ucfirst($apellidouser)  ." de Datea.cl, consulto disponibilidad de trabajo."; ?>."> <strong> +569-<?php echo $telefonouser;?></strong></a></h3><br>
+                        <h3 class="mb-4 text-xl tracking-tight leading-none   text-blue-600 dark:text-blue-500"><i class="fa fa-whatsapp" style="font-size:36px;color:green;float: left;"></i> <a target="_blank" href="https://api.whatsapp.com/send?phone=+569<?php echo $telefonouser;?>; ?>&text=<?php echo "Hola,  ". ucfirst($nombreuser)." ".ucfirst($apellidouser)  ." de Datea.cl, consulto si tiene disponibilidad de trabajar."; ?>."> <strong> +569-<?php echo $telefonouser;?></strong></a></h3><br>
                         <h3 class="mb-4 text-xl  tracking-tight leading-none   text-blue-600 dark:text-blue-500"><i class='fas fa-map-marker-alt' style='font-size:36px;color:#33B2FF ;float: left;'></i><strong> <?php echo $comunauser; ?></strong></h3><br>
                     </div>
 
                     <div class="relative perfilselect" style="background-color: #FEFCF3; padding: 10px 10px; border-radius: 10px;">
-                    <figure id="photo" title="<?PHP if($estado==1){ echo "Disponible";}elseif($estado==2){ echo "Ocupado";}  ?>" tooltip-dir="left">
                         <img class="w-36 h-36  rounded-full" src="./componentes/images/logoTrabajador.png" style="margin-left: 40px;" alt="">
+                        <figure id="photo" title="<?PHP if($estado==1){ echo "Disponible";}elseif($estado==2){ echo "Ocupado";}  ?>" tooltip-dir="left">
 
                         <?php if (intval($estado) == 1) { ?>
                             <span class="top-5 left-12 absolute  w-3.5 h-3.5 bg-green-400 border-2 border-white dark:border-gray-800 rounded-full"></span>

@@ -452,7 +452,7 @@ if(isset($_SESSION['emailuser'])){
                     <h1 class="mb-2 text-4xl  tracking-tight leading-none   md:text-5xl lg:text-6xl text-blue-600 dark:text-blue-500">Seleccionar Comuna</h1>
 
                     <select class="names regg container p-3 m-6"  name="comunas">
-                      <option value="Concepcion"> Concepción</option>
+                      <option value="Concepción"> Concepción</option>
                         <option value="Coronel">Coronel</option>
                         <option value="Chiguayante">Chiguayante</option>
                         <option value="Florida">Florida</option>

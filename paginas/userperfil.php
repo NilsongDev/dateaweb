@@ -478,7 +478,7 @@ if ($queryconsulta) {
 
             <label for="cbmostrar">
                 <input type="checkbox" name="cbmostrar" class="fantasma" />
-                Desbloquear boton para eliminar cuenta
+                Desbloquear el boton para eliminar cuenta.
 
 
             </label>
