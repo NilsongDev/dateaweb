@@ -65,6 +65,7 @@ if(isset($_POST['check'])){
                 $ceramica="Ceramista";
                 $select2 = "SELECT * from perfilusuario inner join oficio_user on oficio_user.fk_oficio_user = perfilusuario.codigologin inner join estado_user on estado_user.estado_fk=perfilusuario.codigologin where perfilusuario.comunausuario = '$resultadoComuna' and oficio_user.nombre_oficio like '%$ceramica%'";
                 $resultado1 = pg_query($conexion, $select2);
+                
                 break;
     
             case 7:
@@ -326,6 +327,60 @@ if(isset($_POST['check'])){
 
 
 
+<?php
+
+if(pg_num_rows($resultado1)==0){
+
+        
+    ?>
+    <style>
+        #imagenSinResultado{
+          width: 54rem;
+            padding: 1rem;
+          
+        }
+      
+
+
+       
+      .imgContainer{
+        display: block;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+      }
+    </style>
+
+
+
+
+    <div style="text-align:center">
+         <h1 class="mb-8 text-8xl font-extrabold tracking-tight leading-none  md:text-8xl lg:text-8xl text-blue-600 dark:text-blue-500"> Sin Resultados</h1>
+    <br>
+        <span class="img-container">
+
+            <img class="imgContainer" src="../sistemaWebTesis/componentes/images/sinresultado.png"  id="imagenSinResultado"/>   
+
+        </span>
+
+      
+
+    
+   <br>
+    </div>
+    
+    <?php
+
+
+
+
+
+}else{
+
+
+ ?> 
+
+
 
 
 
@@ -336,13 +391,13 @@ if(isset($_POST['check'])){
            
 
 
-            <?php
-
-        if(isset($resultado1)){
+        <?php
 
 
+        if(isset($resultado1)==true){
+
+             
   
-
 
 
             while ($fila = pg_fetch_assoc($resultado1)) {
@@ -365,7 +420,7 @@ if(isset($_POST['check'])){
                 <li class="contenedorli">
                     <div class="textoperfil">
                         <h1 class="mb-4 text-xl tracking-tight leading-none   text-blue-600 dark:text-blue-500"><i class='fas fa-portrait' style='font-size:36px;color:#33B2FF ;float: left;'></i> <strong> <?php echo ucfirst($nombreuser ) . " " . ucfirst($apellidouser) ; ?> </strong></h1><br>
-                        <h3 class="mb-4 text-xl tracking-tight leading-none   text-blue-600 dark:text-blue-500"><i class="fa fa-whatsapp" style="font-size:36px;color:green;float: left;"></i> <a target="_blank" href="https://api.whatsapp.com/send?phone=+569<?php  echo $telefonouser;?>&text=<?php echo "hola, ".ucfirst($nombreuser)." ". ucfirst($apellidouser) ."de Datea.cl, consulto si tiene disponibilidad de trabajar."; ?>."> <strong> <?php echo"+569 ".  $telefonouser; ?></strong></a></h3><br>
+                        <h3 class="mb-4 text-xl tracking-tight leading-none   text-blue-600 dark:text-blue-500"><i class="fa fa-whatsapp" style="font-size:36px;color:green;float: left;"></i> <a target="_blank" href="https://api.whatsapp.com/send?phone=+569<?php  echo $telefonouser;?>&text=<?php echo "hola, ".trim(ucfirst($nombreuser))." ".trim(ucfirst($apellidouser))."de Datea.cl, consulto si tiene disponibilidad de trabajar."; ?>."> <strong> <?php echo"+569 ".  $telefonouser; ?></strong></a></h3><br>
                         <h3 class="mb-4 text-xl  tracking-tight leading-none   text-blue-600 dark:text-blue-500"><i class='fas fa-map-marker-alt' style='font-size:36px;color:#33B2FF ;float: left;'></i> <strong><?php echo $comunauser; ?></strong></h3><br>
                       
                     </div>
@@ -392,11 +447,17 @@ if(isset($_POST['check'])){
             <?php
 
             } 
+
+
         }else{
             header("refresh:0;url=index.php");
 
         }
-            ?>
+            
+            
+            
+            
+        }?>
 
 
 

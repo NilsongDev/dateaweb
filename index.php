@@ -320,7 +320,7 @@ if(isset($_SESSION['emailuser'])){
                         ?>
                                 <li class="splide__slide">
                                     <div class="cardperfil"><img src="componentes/images/perfil_user.jpg" alt="ichabod">
-                                        <div class="cardperfil-detalles"><strong>Nombre: <?php echo ucfirst($row["nombreuser"])  . "" . ucfirst($row["apellidouser"]) ; ?></strong><span></span><br><span>Comuna: <?php echo $row["comunausuario"]; ?> <br> Oficio: <?php echo ucfirst($row["nombre_oficio"]) ;?> <br> Telefono:  <a href="https://api.whatsapp.com/send?phone=+569<?php  echo $row["telefonouser"];?>&text=<?php echo "Hola ".ucfirst($row["nombreuser"]). " ".ucfirst($row["apellidouser"])." de Datea.cl, consulto disponibilidad de trabajo."; ?>"> <?php echo"+569 ".  $row["telefonouser"]; ?></a> </span></div>
+                                        <div class="cardperfil-detalles"><strong>Nombre: <?php echo ucfirst($row["nombreuser"])  ." ". ucfirst($row["apellidouser"]) ; ?></strong><span></span><br><span>Comuna: <?php echo $row["comunausuario"]; ?> <br> Oficio: <?php echo ucfirst($row["nombre_oficio"]) ;?> <br> Telefono:  <a target="_blank" href="https://api.whatsapp.com/send?phone=+569<?php  echo $row["telefonouser"];?>&text=<?php echo "Hola ".trim(ucfirst($row["nombreuser"])) . " ".trim(ucfirst($row["apellidouser"])) ." de Datea.cl, consulto disponibilidad de trabajo."; ?>"> <?php echo"+569 ".  $row["telefonouser"]; ?></a> </span></div>
                                     </div>
                                 </li>
 
@@ -546,7 +546,7 @@ if(isset($_SESSION['emailuser'])){
                         ?>
                                 <li class="splide__slide">
                                     <div class="cardperfil"><img src="componentes/images/perfil_user.jpg" alt="ichabod"> 
-                                        <div class="cardperfil-detalles"><strong>Nombre: <?php echo ucfirst($row["nombreuser"])  . " " . ucfirst($row["apellidouser"]) ; ?> </strong><span><br> Comuna: <?php echo $row["comunausuario"]; ?> <br> Oficio: <?php echo ucfirst($row["nombre_oficio"]) ;?> <br>  <a href="https://api.whatsapp.com/send?phone=+569<?php echo $row["telefonouser"];?>&text=<?php echo "Hola ".ucfirst($row["nombreuser"])."".ucfirst($row["apellidouser"]). " de Datea.cl, consulto disponibilidad de trabajo."; ?>"> <strong>  <?php echo"+569 ". $row["telefonouser"];?></strong> </a> </span></div>
+                                        <div class="cardperfil-detalles"><strong>Nombre: <?php echo ucfirst($row["nombreuser"])  . " " . ucfirst($row["apellidouser"]) ; ?> </strong><span><br> Comuna: <?php echo $row["comunausuario"]; ?> <br> Oficio: <?php echo ucfirst($row["nombre_oficio"]) ;?> <br>  <a target="_blank" href="https://api.whatsapp.com/send?phone=+569<?php echo $row["telefonouser"];?>&text=<?php echo "Hola ".trim(ucfirst($row["nombreuser"])) ." ".trim(ucfirst($row["apellidouser"])) . " de Datea.cl, consulto disponibilidad de trabajo."; ?>"> <strong>  <?php echo"+569 ". $row["telefonouser"];?></strong> </a> </span></div>
                                     </div>
                                 </li>
 
