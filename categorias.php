@@ -275,7 +275,13 @@ if (isset($_SESSION['emailuser'])) {
                     </div>
 
                     <div class="relative perfilselect" style="background-color: #FEFCF3; padding: 10px 10px; border-radius: 10px;">
-                        <img class="w-36 h-36  rounded-full" src="./componentes/images/logoTrabajador.png" style="margin-left: 40px;" alt="">
+                        
+                                <?PHP if($estado==1){ ?><img class="w-36 h-36  rounded-full" src="./componentes/images/logoTrabajadordisponible.png" style="margin-left: 40px;" alt=""> <?php } elseif($estado==2){ ?><img class="w-36 h-36  rounded-full" src="./componentes/images/logoTrabajadorocupado.png" style="margin-left: 40px;" alt=""><?php }  ?>
+                    
+                        
+
+
+
                         <figure id="photo" title="<?PHP if($estado==1){ echo "Disponible";}elseif($estado==2){ echo "Ocupado";}  ?>" tooltip-dir="left">
 
                         <?php if (intval($estado) == 1) { ?>

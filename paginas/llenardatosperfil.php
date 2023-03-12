@@ -92,7 +92,7 @@ $ceramista="Ceramista";
     <nav class="bg-white px-2 sm:px-4 py-2.5 dark:bg-gray-900  w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600">
         <div class="container flex flex-wrap justify-between items-center mx-auto">
             <a href="../index.php" class="flex items-center">
-                <img src="https://flowbite.com/docs/images/logo.svg" class="mr-3 h-6 sm:h-9" alt="Flowbite Logo">
+                <img src="../componentes/images/logooobueno.png" class="mr-3 h-6 sm:h-9" alt="Flowbite Logo">
                 <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">DATEA.CL</span>
             </a>
             <div class="flex md:order-2">
@@ -209,7 +209,7 @@ $ceramista="Ceramista";
                             <div class="bg-white p-3 border-t-4  ">
 
                                 <h3 class="text-gray-600 font-lg text-semibold  leading-10">Descripción breve : </h3>
-                                <input type="text" placeholder="texto" class="w-full" name="descripcionusuario" maxlength="99" value="<?php echo $descripcionUsuario; ?>">
+                                <input type="text" placeholder="texto" class="w-full" name="descripcionusuario" maxlength="99" value="<?php echo rtrim(ltrim($descripcionUsuario)); ?>">
 
                             </div>
                             <!-- End of profile card -->
@@ -263,23 +263,18 @@ $ceramista="Ceramista";
                                 <div class="grid md:grid-cols-5 text-sm">
                                     <div class=" grid-cols-2">
                                         <div class="px-4 py-2 font-semibold"> NOMBRE</div>
-                                        <div class="px-4 py-2"><input type="text" name="nombreusuario" maxlength="50" value="<?php echo $nombreUsuario;  ?>"        onkeypress="return soloLetras(event)" onblur="limpia()" id="miInput"     > </div>
+                                        <div class="px-4 py-2"><input type="text" name="nombreusuario" maxlength="50" value="<?php echo trim($nombreUsuario);  ?>"        onkeypress="return soloLetras(event)" onblur="limpia()" id="miInput"     > </div>
                                     </div>
 
 
                                     <div class="grid-cols-2">
                                         <div class="px-4 py-2 font-semibold">APELLIDO</div>
-                                        <div class="px-4 py-2"> <input type="text" name="apellidousuario" maxlength="50" value="<?php echo $apellidoUsuario;  ?>"     onkeypress="return soloLetras(event)" onblur="limpia()" id="miInput"   ></div>
+                                        <div class="px-4 py-2"> <input type="text" name="apellidousuario" maxlength="50" value="<?php echo trim($apellidoUsuario);  ?>"     onkeypress="return soloLetras(event)" onblur="limpia()" id="miInput"   ></div>
                                     </div>
 
                                   
 
-                                    <div class="grid grid-cols-2">
-                                        <div class="px-4 py-2 font-semibold">COMUNA</div>
-                                        <p class="px-4 py-2"><?php echo $comunaUsuario;  ?></p>
-                                        <!--  <div class="px-4 py-2"><input type="text" name="comunausuario" maxlength="30" value=" <?php //echo $comunaUsuario;  
-                                                                                                                                    ?>"></div>-->
-                                    </div>
+                               
 
 
                                     <!-- 
@@ -339,22 +334,179 @@ $ceramista="Ceramista";
                         <div class="comunas">
                             <h1>SELECCIONAR COMUNA</h1>
                             <select class="names regg container p-3 m-6" name="comunas">
-                                <option name="comunausuario" value="">Seleccionar Comuna</option>
-                                <option name="comunausuario" value="Concepcion">Concepción</option>
-                                <option name="comunausuario" value="Coronel">Coronel</option>
-                                <option name="comunausuario" value="Chiguayante">Chiguayante</option>
-                                <option name="comunausuario" value="Florida">Florida</option>
-                                <option name="comunausuario" value="Hualqui">Hualqui</option>
-                                <option name="comunausuario" value="Lota">Lota</option>
-                                <option name="comunausuario" value="Penco">Penco</option>
-                                <option name="comunausuario" value="San_pedro">San Pedro</option>
-                                <option name="comunausuario" value="Santa_juana">Santa juana</option>
-                                <option name="comunausuario" value="Talcahuano">Talcahuano</option>
-                                <option name="comunausuario" value="Tome">Tome</option>
-                                <option name="comunausuario" value="Hualpen">Hualpen</option>
+                                <option name="comunausuario"  value="">Seleccionar Comuna</option>
+
+
+                                    <?php  if( trim($comunaUsuario) =="Concepción" ){
+
+                                        ?> <option name="comunausuario" selected value="Concepción">Concepción</option>   <?php
+
+                                        }else{
+                                               ?> <option name="comunausuario"  value="Concepción">Concepción</option><?php 
+
+                                    }    ?>
+
+                               
+
+
+
+                                    <?php if(trim($comunaUsuario)=="Coronel" ){
+
+                                       ?> <option name="comunausuario" selected value="Coronel">Coronel</option> <?php         
+                                    }else{
+
+                                        ?> <option name="comunausuario" value="Coronel">Coronel</option> <?php     
+                                    }
+                                    
+                                    
+                                    ?>
+
+                               
+                                    <?php if( trim($comunaUsuario)=="Chiguayante" ){
+
+                                        ?> <option name="comunausuario" selected value="Chiguayante">Chiguayante</option><?php
+
+                                    }else{
+
+                                        ?>  <option name="comunausuario" value="Chiguayante">Chiguayante</option> <?php
+                                    }
+                                    
+                                    
+                                    ?>    
+
+
+                                    <?php if(trim($comunaUsuario)=="Florida" ){
+
+                                        ?> <option name="comunausuario" selected value="Florida">Florida</option>   <?php
+
+                                    }else{
+
+
+                                        ?>  <option name="comunausuario" value="Florida">Florida</option>  <?php
+
+                                    } ?>
+                               
+                                
+
+
+
+
+                                            <?php if(trim($comunaUsuario)=="Hualqui" ){
+
+                                            ?>  <option name="comunausuario" selected value="Hualqui">Hualqui</option>   <?php
+
+                                        }else{
+
+
+                                            ?>  <option name="comunausuario" value="Hualqui">Hualqui</option>  <?php
+
+                                        } ?>
+
+
+
+
+                                            <?php if(trim($comunaUsuario)=="Lota" ){
+
+                                            ?>  <option name="comunausuario" selected value="Lota">Lota</option>  <?php
+
+                                            }else{
+
+
+                                            ?>  <option name="comunausuario" value="Lota">Lota</option>  <?php
+
+                                            } ?>
+
+
+
+                                                <?php if(trim($comunaUsuario)=="Penco" ){
+
+                                                ?>  <option name="comunausuario" selected value="Penco">Penco</option>  <?php
+
+                                                }else{
+
+
+                                                ?>  <option name="comunausuario" value="Penco">Penco</option>  <?php
+
+                                                } ?>
+
+
+                                                
+
+                                                <?php if(trim($comunaUsuario)=="San_pedro" ){
+
+                                                ?>  <option name="comunausuario" selected value="San_pedro">San Pedro</option> <?php
+
+                                                }else{
+
+
+                                                ?>  <option name="comunausuario" value="San_pedro">San Pedro</option>  <?php
+
+                                                } ?>
+
+
+
+                                                <?php if(trim($comunaUsuario)=="Santa_juana" ){
+
+                                                ?>  <option name="comunausuario" selected value="Santa_juana">Santa juana</option> <?php
+
+                                                }else{
+
+
+                                                ?>  <option name="comunausuario" value="Santa_juana">Santa juana</option>  <?php
+
+                                                } ?>
+
+
+
+
+                                                <?php if(trim($comunaUsuario)=="Talcahuano" ){
+
+                                                ?>  <option name="comunausuario" selected value="Talcahuano">Talcahuano</option> <?php
+
+                                                }else{
+
+
+                                                ?>  <option name="comunausuario" value="Talcahuano">Talcahuano</option>  <?php
+
+                                                } ?>
+
+
+
+                                                <?php if(trim($comunaUsuario)=="Tome" ){
+
+                                                ?>  <option name="comunausuario" selected value="Tome">Tome</option> <?php
+
+                                                }else{
+
+
+                                                ?>  <option name="comunausuario" value="Tome">Tome</option>  <?php
+
+                                                } ?>
+
+
+                                                <?php if(trim($comunaUsuario)=="Hualpen" ){
+
+                                                ?>  <option name="comunausuario" selected value="Hualpen">Hualpen</option> <?php
+
+                                                }else{
+
+
+                                                ?>  <option name="comunausuario" value="Hualpen">Hualpen</option> <?php
+
+                                                } ?>
+                                                                                
+                                
+                                
+                                
+                            
+                                
                             </select>
 
                         </div>
+
+
+
+
 
 
                         <div class="bg-white p-3 shadow-sm rounded-sm">

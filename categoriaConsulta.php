@@ -24,7 +24,7 @@ $comuna = strval($_POST['comunas']);
 if(isset($_POST['check'])){
 
 
-    if($comuna== "Concepción" || $comuna== "Coronel" || $comuna== "Chiguayante" ||$comuna== "Florida" || $comuna== "Hualqui" || $comuna== "Lota" || $comuna== "Penco" || $comuna== "San_pedro" ||$comuna== "Santa_juana" || $comuna== "Talcahuano" || $comuna== "Tome" ||$comuna== "Hualpen" ){
+    if($comuna == "Concepción" || $comuna== "Coronel" || $comuna== "Chiguayante" ||$comuna== "Florida" || $comuna== "Hualqui" || $comuna== "Lota" || $comuna== "Penco" || $comuna== "San_pedro" ||$comuna== "Santa_juana" || $comuna== "Talcahuano" || $comuna== "Tome" ||$comuna== "Hualpen" ){
         $resultadoComuna= trim($comuna) ;
         
 
@@ -32,7 +32,7 @@ if(isset($_POST['check'])){
 
             case 1:
                 $pintor="Pintor";
-                $select2 = "SELECT * from perfilusuario inner join oficio_user on oficio_user.fk_oficio_user = perfilusuario.codigologin inner join estado_user on estado_user.estado_fk=perfilusuario.codigologin where perfilusuario.comunausuario = '$resultadoComuna' and oficio_user.nombre_oficio='$pintor'";
+                $select2 = "SELECT * from perfilusuario inner join oficio_user on oficio_user.fk_oficio_user = perfilusuario.codigologin inner join estado_user on estado_user.estado_fk=perfilusuario.codigologin where perfilusuario.comunausuario like '%$resultadoComuna%' and oficio_user.nombre_oficio like'%$pintor%'";
                 $resultado1 = pg_query($conexion, $select2);
                 break;
     
@@ -71,7 +71,7 @@ if(isset($_POST['check'])){
             case 7:
                 $electro1="Electrico";
                 $electro=trim($electro1);
-                $select2 = "SELECT * from perfilusuario inner join oficio_user on oficio_user.fk_oficio_user = perfilusuario.codigologin inner join estado_user on estado_user.estado_fk=perfilusuario.codigologin where perfilusuario.comunausuario = '$resultadoComuna' and oficio_user.nombre_oficio like'%$electro%'";
+                $select2 = "SELECT * from perfilusuario inner join oficio_user on oficio_user.fk_oficio_user = perfilusuario.codigologin inner join estado_user on estado_user.estado_fk=perfilusuario.codigologin where perfilusuario.comunausuario = '$resultadoComuna' and oficio_user.nombre_oficio like'%$electrico%'";
                 $resultado1 = pg_query($conexion, $select2);
                 break;
     
@@ -319,30 +319,20 @@ if(isset($_POST['check'])){
             color: #ffffff;
         }
     </style>
-
-
-
-
-
-
-
-
+<br><br>
 <?php
-
-if(pg_num_rows($resultado1)==0){
-
-        
+if(pg_num_rows($resultado1)==0){   
     ?>
+
+
+
+
     <style>
         #imagenSinResultado{
           width: 54rem;
-            padding: 1rem;
-          
+            padding: 1rem;  
         }
       
-
-
-       
       .imgContainer{
         display: block;
   width: 60%;
@@ -358,50 +348,25 @@ if(pg_num_rows($resultado1)==0){
          <h1 class="mb-8 text-8xl font-extrabold tracking-tight leading-none  md:text-8xl lg:text-8xl text-blue-600 dark:text-blue-500"> Sin Resultados</h1>
     <br>
         <span class="img-container">
-
             <img class="imgContainer" src="../sistemaWebTesis/componentes/images/sinresultado.png"  id="imagenSinResultado"/>   
-
-        </span>
-
-      
-
-    
+        </span>    
    <br>
     </div>
-    
+
+
+
+
     <?php
-
-
-
-
-
-}else{
-
-
+ }else{
  ?> 
 
-
-
-
-
     <div class="containerperfil">
-
         <ul class="auto-grid">
-
-           
-
-
         <?php
 
-
-        if(isset($resultado1)==true){
-
-             
-  
-
+        if(isset($resultado1)){
 
             while ($fila = pg_fetch_assoc($resultado1)) {
-
 
                 $nombreuser = $fila["nombreuser"];
                 $apellidouser = $fila["apellidouser"];
@@ -410,10 +375,6 @@ if(pg_num_rows($resultado1)==0){
                 $descripcionUser = $fila["descripcionuser"];
                 $oficio = $fila["nombre_oficio"];
                 $estado =$fila["estado_disponible"];   
-
- 
-
-
 
             ?>
           
@@ -426,7 +387,8 @@ if(pg_num_rows($resultado1)==0){
                     </div>
 
                     <div class="relative perfilselect " style="background-color: #FEFCF3; padding: 10px 10px; border-radius: 10px;">
-                        <img class="w-36 h-36  rounded-full" src="./componentes/images/logoTrabajador.png" style="margin-left: 40px;" alt="" >
+                    <?PHP if($estado==1){ ?><img class="w-36 h-36  rounded-full" src="./componentes/images/logoTrabajadordisponible.png" style="margin-left: 40px;" alt=""> <?php } elseif($estado==2){ ?><img class="w-36 h-36  rounded-full" src="./componentes/images/logoTrabajadorocupado.png" style="margin-left: 40px;" alt=""><?php }  ?>
+
                         <figure id="photo" title="<?PHP if($estado==1){ echo "Disponible";}elseif($estado==2){ echo "Ocupado";}  ?>" tooltip-dir="left">
 
                         <?php if(intval($estado)==1 ){  ?>
@@ -554,11 +516,7 @@ if(pg_num_rows($resultado1)==0){
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.5.0/dist/js/splide.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.js"></script>
 
-
-
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
     <script src="componentes/js/scripSlider.js"></script>
     <!-- para iconos con font awesome -->
     <script src="https://kit.fontawesome.com/6d44736547.js" crossorigin="anonymous"></script>

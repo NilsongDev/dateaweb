@@ -1,9 +1,13 @@
 <?php
 
 session_start();
+
+
+
 $conexion = pg_connect("host=localhost dbname=postgres user=postgres password=0988");
 $queryDatosPerfil = "SELECT * from perfilusuario inner join oficio_user on oficio_user.fk_oficio_user = perfilusuario.codigologin where perfilusuario.comunausuario='Hualqui' limit 16";
 $queryDatosPerfilFinal = "SELECT * from perfilusuario inner join oficio_user on oficio_user.fk_oficio_user = perfilusuario.codigologin  order by iduser desc limit 30 ";
+
 $resultadoFinal=pg_query($conexion,$queryDatosPerfilFinal);
 $resultado = pg_query($conexion, $queryDatosPerfil);
 
@@ -537,6 +541,7 @@ if(isset($_SESSION['emailuser'])){
 
                 <ul class="splide__list">
                         <?php
+                        
                         if (pg_num_rows($resultadoFinal) > 0) {
                             while ($row = pg_fetch_assoc($resultadoFinal)) {
                                 $row["nombreuser"];

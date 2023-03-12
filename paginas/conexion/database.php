@@ -1,18 +1,24 @@
-<?php 
-include('datosConexion.php');
 
-class CConexion{
-    function ConexionBD(){
-        try{
-            $conexion = new PDO("pgsql:host=".SERVER."; dbname=".DBNAME,USER,PASSWORD);
-           // echo "se conecto correctamente a la base de datos";
-            return $conexion;
-        }
-        catch(PDOException $exp){
-            die("no se pudo conectar a la base de datos, error es : ". $exp->getMessage());
-        }
 
-    }
+
+<?php
+
+
+function conectar(){
+
+$servername = "localhost";
+$database = "postgres";
+$username = "postgres";
+$password = "0988";
+// Create connection
+$conexion  = pg_connect($servername, $username, $password, $database);
+// Check connection
+if (!$conexion) {
+   die("Connection failed: "  );
 }
+echo "Connected successfully";
 
+
+
+}
 ?>

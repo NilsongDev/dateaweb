@@ -22,7 +22,6 @@ $descripcion= $_POST['descripcionusuario'];
 
 
 
-
 switch($_POST['oficio_user']){
 
     case 1:
@@ -78,8 +77,8 @@ switch($_POST['oficio_user']){
 }
 
 
-if($_REQUEST['comunas']== "Concepcion"){
-    $resultadoComuna=$_REQUEST['comunas'];
+if($_REQUEST['comunas']== "Concepción"){
+   $resultadoComuna=$_REQUEST['comunas'];
 }
 
 if($_REQUEST['comunas']== "Coronel"){
