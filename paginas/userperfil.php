@@ -546,7 +546,7 @@ if ($queryconsulta) {
                     </ul>
                 </div>
                 <div>
-                    <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Mesa de ayuda</h2>
+                    <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Mesa de Ayuda</h2>
                     <ul class="text-gray-600 dark:text-gray-400">
                         <li class="mb-4">
                             <a href="../contacto.php" class="hover:underline ">Contacto</a>
@@ -557,7 +557,7 @@ if ($queryconsulta) {
                     <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Legal</h2>
                     <ul class="text-gray-600 dark:text-gray-400">
                         <li class="mb-4">
-                            <a href="../politicas.php" class="hover:underline">política de privacidad</a>
+                            <a href="../politicas.php" class="hover:underline">Política de Privacidad</a>
                         </li>
                         <li>
                             <a href="../terminos.php" class="hover:underline">Términos &amp; Condiciones</a>

@@ -7,7 +7,7 @@ session_start();
 
 include('paginas/conexion/database.php');
 $queryDatosPerfil = "SELECT * from perfilusuario inner join oficio_user on oficio_user.fk_oficio_user = perfilusuario.codigologin where perfilusuario.comunausuario='Hualqui' limit 16";
-$queryDatosPerfilFinal = "SELECT * from perfilusuario inner join oficio_user on oficio_user.fk_oficio_user = perfilusuario.codigologin  order by iduser desc limit 30 ";
+$queryDatosPerfilFinal = "SELECT * from perfilusuario inner join oficio_user on oficio_user.fk_oficio_user = perfilusuario.codigologin where nombreuser is not null   order by iduser desc limit 30 ";
 
 $resultadoFinal = pg_query($conexion, $queryDatosPerfilFinal);
 $resultado = pg_query($conexion, $queryDatosPerfil);

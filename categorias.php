@@ -224,7 +224,7 @@ if (isset($_SESSION['emailuser'])) {
             }
 
             $empieza = ($pagina - 1) * $porpaginas;
-            $query = "SELECT * FROM perfilusuario inner join oficio_user on oficio_user.fk_oficio_user = perfilusuario.codigologin inner join estado_user on estado_user.estado_fk=perfilusuario.codigologin order by comunausuario limit $porpaginas offset $empieza";
+            $query = "SELECT * FROM perfilusuario inner join oficio_user on oficio_user.fk_oficio_user = perfilusuario.codigologin inner join estado_user on estado_user.estado_fk=perfilusuario.codigologin where nombreuser is not null  order by comunausuario limit $porpaginas offset $empieza";
             $resultado = pg_query($conexion, $query);
 
 
