@@ -1,7 +1,7 @@
 <?php
 session_start();
 $idsesion =  $_SESSION['numeroIDlogin'];
-$conexion = pg_connect("host=localhost dbname=postgres user=postgres password=0988");
+include('conexion/database.php');
 $consulta = "SELECT * from perfilusuario inner join especialidad_user on especialidad_user.fk_oficio_perfil = perfilusuario.codigologin inner join loginuser on loginuser.idlogin = perfilusuario.codigologin  where perfilusuario.codigologin='$idsesion' ";
 $queryDatosUser = "SELECT * FROM perfilusuario WHERE codigologin= '$idsesion' ";
 $consultaDatosUser = pg_query($conexion, $queryDatosUser);

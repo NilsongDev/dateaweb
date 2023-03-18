@@ -4,7 +4,7 @@ error_reporting(0);
 $iduser= $_SESSION['numeroIDlogin'];
 
 
-$conexion = pg_connect("host=localhost dbname=postgres user=postgres password=0988");
+include('conexion/database.php');
 
 //$descripcionDeUsuario = $_POST['descripcionusuario'];
 

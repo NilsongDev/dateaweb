@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-$conexion = pg_connect("host=localhost dbname=postgres user=postgres password=0988");
+include('paginas/conexion/database.php');
 $queryDatosPerfil = "SELECT * from perfilusuario limit 16";
 $resultado = pg_query($conexion, $queryDatosPerfil);
 

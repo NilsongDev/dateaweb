@@ -1,11 +1,12 @@
 <?php
+include('conexion/database.php');
 $usuario = $_POST['usuario'];
 $password = $_POST['clave'];
 session_start();
 $_SESSION['user'] = $usuario;
 
 
-$conexion = pg_connect("host=localhost dbname=postgres user=postgres password=0988");
+
 
 
 
@@ -14,7 +15,7 @@ $dato = $password;
 
 
 
- //Metodo de encriptaciÃ³n
+ //Metodo de encriptaciÃ³n include('conexion/database.php');
  $method = 'aes-256-cbc';
  // Puedes generar una diferente usando la funcion $getIV()
  $iv = base64_decode("C9fBxl1EWtYTL1/M8jfstw==");

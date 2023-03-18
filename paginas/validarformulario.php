@@ -5,7 +5,7 @@ $passUsuario1 = $_POST['password1'];
 $passUsuario2 = $_POST['password2'];
 
 
-$conexion = pg_connect("host=localhost dbname=postgres user=postgres password=0988");
+include('conexion/database.php');
 
 $consultaEmail = "SELECT username FROM loginuser WHERE username ='$emailUsuario'";
 $res = pg_query($conexion, $consultaEmail);

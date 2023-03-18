@@ -1,7 +1,8 @@
 <?php 
 session_start();
+include('conexion/database.php');
 $idsesion =  $_SESSION['numeroIDlogin'];
-$conexion = pg_connect("host=localhost dbname=postgres user=postgres password=0988");
+
 $id = intval($idsesion);
 
 

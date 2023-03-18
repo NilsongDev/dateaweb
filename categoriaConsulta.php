@@ -3,7 +3,7 @@ header('Cache-Control: no cache'); //no cache
 
 session_start();
 error_reporting(0);
-$conexion = pg_connect("host=localhost dbname=postgres user=postgres password=0988");
+include('paginas/conexion/database.php');
 if (isset($_SESSION['nombreusuario'])) {
 
     $nombreuser = $_SESSION['nombreusuario'];
