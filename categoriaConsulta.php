@@ -399,7 +399,7 @@ if(pg_num_rows($resultado1)==0){
                         
                             <?php }?><br>
                             </figure> 
-                        <h3 class="mb-4 text-xl tracking-tight leading-none   text-blue-600 dark:text-blue-500">Descripción: <?php echo $descripcionUser; ?></h3>
+                        <h3 class="mb-4 text-xl tracking-tight leading-none   text-blue-600 dark:text-blue-500">Descripción: <?php echo ucfirst(ltrim(rtrim($descripcionUser) ) ); ?></h3>
                         <h3 class="mb-4 text-xl tracking-tight leading-none   text-blue-600 dark:text-blue-500"><i class='fas fa-hard-hat' style='font-size:24px;color:#F2CD5C;float: left;'></i>  <strong><?php echo $oficio; ?></strong></h3>
                     </div>
 
@@ -429,7 +429,7 @@ if(pg_num_rows($resultado1)==0){
 
 
 
-
+  
 
 
 

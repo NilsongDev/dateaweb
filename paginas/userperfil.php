@@ -83,7 +83,7 @@ if ($queryconsulta) {
                 </div>
                 <aside style="text-align:center">
                     <div class="ttl">
-                        <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none  md:text-5xl lg:text-6xl text-blue-600 dark:text-blue-500">Recuerda Actualizar Tus Datos.</h1>
+                        <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none  md:text-5xl lg:text-6xl text-blue-600 dark:text-blue-500">Recuerda Actualizar Tus Datos</h1>
                     </div>
                     <p class="text-lg font-bold dark:text-gray-400 text-gray-500">Forma Parte De Nuestra Comunidad de Datea.cl en nuestras Redes Sociales</p> <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" )> <a href="llenardatosperfil.php">Actualizar Datos</a> </button>
                 </aside>
@@ -232,7 +232,7 @@ if ($queryconsulta) {
 
                         <h1 class="text-gray-900 font-bold text-xl leading-8 my-1"><?php echo $nombreusuario, " ", $apellidousuario; ?></h1>
                         <h3 class="text-gray-600 font-lg text-semibold leading-6">Descripción : </h3>
-                        <p class="text-sm text-gray-500 hover:text-gray-600 leading-6"><?php echo $descripcionuser; ?></p>
+                        <p class="text-sm text-gray-500 hover:text-gray-600 leading-6"><?php echo ucfirst(ltrim(rtrim($descripcionuser) ) ) ; ?></p>
                         <ul class="bg-gray-100 text-gray-600 hover:text-gray-700 hover:shadow py-2 px-3 mt-3 divide-y rounded shadow-sm">
 
                             <ul class=" list-inside ">

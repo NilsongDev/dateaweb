@@ -209,7 +209,7 @@ $ceramista="Ceramista";
                             <div class="bg-white p-3 border-t-4  ">
 
                                 <h3 class="text-gray-600 font-lg text-semibold  leading-10">Descripción breve : </h3>
-                                <input type="text" placeholder="texto" class="w-full" name="descripcionusuario" maxlength="99" value="<?php echo rtrim(ltrim($descripcionUsuario)); ?>">
+                                <input type="text" placeholder="texto" class="w-full" name="descripcionusuario" maxlength="99" value="<?php echo ucfirst(rtrim(ltrim($descripcionUsuario))) ; ?>">
 
                             </div>
                             <!-- End of profile card -->
@@ -474,24 +474,24 @@ $ceramista="Ceramista";
 
                                                 <?php if(trim($comunaUsuario)=="Tome" ){
 
-                                                ?>  <option name="comunausuario" selected value="Tome">Tome</option> <?php
+                                                ?>  <option name="comunausuario" selected value="Tome">Tomé</option> <?php
 
                                                 }else{
 
 
-                                                ?>  <option name="comunausuario" value="Tome">Tome</option>  <?php
+                                                ?>  <option name="comunausuario" value="Tome">Tomé</option>  <?php
 
                                                 } ?>
 
 
                                                 <?php if(trim($comunaUsuario)=="Hualpen" ){
 
-                                                ?>  <option name="comunausuario" selected value="Hualpen">Hualpen</option> <?php
+                                                ?>  <option name="comunausuario" selected value="Hualpen">Hualpén</option> <?php
 
                                                 }else{
 
 
-                                                ?>  <option name="comunausuario" value="Hualpen">Hualpen</option> <?php
+                                                ?>  <option name="comunausuario" value="Hualpen">Hualpén</option> <?php
 
                                                 } ?>
                                                                                 

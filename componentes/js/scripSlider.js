@@ -45,10 +45,10 @@ function showSlides(n) {
     var splide = new Splide( '.splide',{
         type : 'loop',
         autoplay: true,
-        perPage:4,
+        perPage:5,
         breakpoints: {
             1024: {
-              perPage: 4,
+              perPage: 5,
              
             },
             767: {
@@ -56,7 +56,7 @@ function showSlides(n) {
           
             },
             640: {
-              perPage: 2,
+              perPage: 3,
         
             },
           },
@@ -79,14 +79,14 @@ document.addEventListener( 'DOMContentLoaded', function() {
 var splide = new Splide( '.splider',{
     type : 'loop',
     autoplay: true,
-    perPage:8,
+    perPage:6,
     breakpoints: {
         1024: {
-          perPage: 8,
+          perPage: 6,
          
         },
         767: {
-          perPage: 6,
+          perPage: 5,
       
         },
         640: {
