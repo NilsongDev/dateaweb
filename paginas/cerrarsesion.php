@@ -24,7 +24,7 @@ header("refresh:2;url=../index.php");
         Swal.fire({
             icon: 'warning',
             title: 'Adiós',
-            text: 'cerrando sesión',
+            text: 'Cerrando Sesión',
             showConfirmButton: false,
             
         })

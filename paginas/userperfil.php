@@ -200,7 +200,7 @@ if ($queryconsulta) {
                 <nav :class="{'flex': open, 'hidden': !open}" class="flex-col flex-grow pb-4 md:pb-0 hidden md:flex md:justify-end md:flex-row">
                     <div @click.away="open = false" class="relative" x-data="{ open: false }">
                         <button @click="open = !open" class="flex flex-row items-center space-x-2 w-full px-4 py-2 mt-2 text-sm font-semibold text-left bg-transparent hover:bg-blue-800 md:w-auto md:inline md:mt-0 md:ml-4 hover:bg-gray-200 focus:bg-blue-800 focus:outline-none focus:shadow-outline">
-                            <span><?php echo $nombreusuario; ?></span>
+                            <span><?php echo ucfirst($nombreusuario); ?></span>
                             <img class="inline h-6 rounded-full" src="https://w7.pngwing.com/pngs/852/10/png-transparent-computer-icons-laborer-others-miscellaneous-hat-logo.png">
                             <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}" class="inline w-4 h-4 transition-transform duration-200 transform">
                                 <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
@@ -230,7 +230,7 @@ if ($queryconsulta) {
                     <!-- Profile Card -->
                     <div class="bg-white p-3 border-t-4 border-green-400">
 
-                        <h1 class="text-gray-900 font-bold text-xl leading-8 my-1"><?php echo $nombreusuario, " ", $apellidousuario; ?></h1>
+                        <h1 class="text-gray-900 font-bold text-xl leading-8 my-1"><?php echo ucfirst($nombreusuario) , " ", ucfirst($apellidousuario); ?></h1>
                         <h3 class="text-gray-600 font-lg text-semibold leading-6">Descripción : </h3>
                         <p class="text-sm text-gray-500 hover:text-gray-600 leading-6"><?php echo ucfirst(ltrim(rtrim($descripcionuser) ) ) ; ?></p>
                         <ul class="bg-gray-100 text-gray-600 hover:text-gray-700 hover:shadow py-2 px-3 mt-3 divide-y rounded shadow-sm">
@@ -271,7 +271,7 @@ if ($queryconsulta) {
                                 <h2>Tu estado es:<?php if ($estadoDisponible == 1) {
                                                         echo " DISPONIBLE";
                                                     } elseif ($estadoDisponible == 2) {
-                                                        echo " OCUPADO";
+                                                        echo  " OCUPADO";
                                                     } ?> </h2>
 
 
@@ -342,11 +342,11 @@ if ($queryconsulta) {
                             <div class="grid md:grid-cols-2 text-sm">
                                 <div class="grid grid-cols-2">
                                     <div class="px-4 py-2 font-semibold"> NOMBRE</div>
-                                    <div class="px-4 py-2"><span><?php echo $nombreusuario; ?></span></div>
+                                    <div class="px-4 py-2"><span><?php echo ucfirst($nombreusuario); ?></span></div>
                                 </div>
                                 <div class="grid grid-cols-2">
                                     <div class="px-4 py-2 font-semibold">APELLIDO</div>
-                                    <div class="px-4 py-2"><?php echo $apellidousuario; ?></div>
+                                    <div class="px-4 py-2"><?php echo ucfirst($apellidousuario); ?></div>
                                 </div>
 
                                 <div class="grid grid-cols-2">
