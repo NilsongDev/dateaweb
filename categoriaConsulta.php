@@ -348,6 +348,7 @@ if(pg_num_rows($resultado1)==0){
  ?> 
 
     <div class="containerperfil">
+        <div class="cards">
         <ul class="auto-grid">
         <?php
 
@@ -412,6 +413,7 @@ if(pg_num_rows($resultado1)==0){
 
 
         </ul>
+        </div>
     </div>
 
 

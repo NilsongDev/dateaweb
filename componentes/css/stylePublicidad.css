@@ -195,13 +195,85 @@
 
 
 
-li{list-style: none;}
 
 
 
 
-.anchoprueba{
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 540px){
+  .cards ul{ grid-template-columns: repeat(2, 1fr); }
+}
+
+@media only screen and (max-width: 540px) {
+  .FollowUs .Container {
+      display: inline-block;
+      -ms-align-items: center;
+      align-items: center
+  }
+
+  .FollowUs aside {
+      flex: 1;
+      text-align: left;
+      padding-right: 1em
+  }
+
+  .FollowUs li {
+      padding-right: 30px
+  }
+
+  .close-dv {
+      order: 3;
+      margin: 0
+      
+  }
+
+
+  .containerperfil   {
+    display: inline;
   
+  }
+
+
+
+  .descripcionUser{
+    display: none;
+ 
+    
+  }
+  .contenedorli{
+    max-width: 240px;
+    
+    
+  }
+
+ 
+
+  .imgPrincipal{
+    width: 50%;
+    height: auto;
+  }
+
+  
+
 }
 
 
@@ -212,3 +284,183 @@ li{list-style: none;}
 
 
 
+
+
+
+
+
+li{list-style: none;}
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 414px){
+  .cards ul{ grid-template-columns: repeat(2, 1fr); }
+
+
+}
+
+
+
+
+
+
+@media only screen and (max-width: 414px) {
+  .FollowUs .Container {
+      display: inline-block;
+      -ms-align-items: center;
+      align-items: center
+  }
+
+  .FollowUs aside {
+      flex: 1;
+      text-align: left;
+      padding-right: 1em
+  }
+
+  .FollowUs li {
+      padding-right: 30px
+  }
+
+  .close-dv {
+      order: 3;
+      margin: 0
+      
+  }
+
+
+  .containerperfil   {
+    display: inline;
+  
+  }
+
+
+
+  .descripcionUser{
+    display: none;
+ 
+    
+  }
+  .contenedorli{
+    max-width: 180px;
+    
+    
+  }
+
+ 
+
+  .imgPrincipal{
+    width: 40%;
+    height: auto;
+  }
+
+  .container {
+     width: 0; 
+}
+
+
+
+  .perfilesBusqueda {
+    display: inline-flex;
+}
+
+  .perfilesBusqueda{
+
+  
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    gap: 1rem;
+
+    
+  
+  flex-direction: column;
+    
+  }
+  
+.cards {
+  width: 203px;
+  margin: 0 auto;
+  display: grid;
+  gap: 1rem;
+ 
+}
+
+  .perfilselect{
+   
+    padding: 0;
+    margin:0;
+    border: 0;
+    width: 100px;
+   
+  }
+
+ 
+
+
+
+  .imgCheck{
+    width: 100px;
+  }
+
+
+
+  
+  .regg {
+    display: none;
+    display: flex;
+    background-color: #55acee;
+    border-radius: 5px;
+    padding: 0;
+    margin:0;
+    border: 0;
+    width: 26rem;
+    
+  }
+ 
+  select.names.regg.container.p-3.m-6{
+    padding: 0;
+    margin:0;
+    border: 0;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: white;
+    
+  }
+
+ 
+
+
+
+
+  .cardsUno{
+    padding: 0;
+    margin:0;
+    border: 0;
+  }
+
+  .imagenAvatar{
+
+
+  }
+}
+
+
+
+
+
+
+
+.regg {
+  width: 30rem;
+}
+.perfilesBusqueda {
+  display: inline-flex;
+}

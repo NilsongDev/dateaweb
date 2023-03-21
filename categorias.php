@@ -211,7 +211,7 @@ if (isset($_SESSION['emailuser'])) {
 
 
     <div class="containerperfil">
-
+        <div class="cards cardsUno">
         <ul class="auto-grid">
 
             <?php
@@ -265,7 +265,7 @@ if (isset($_SESSION['emailuser'])) {
 
                     <div class="relative perfilselect" style="background-color: #FEFCF3; padding: 10px 10px; border-radius: 10px;">
                         
-                                <?PHP if($estado==1){ ?><img class="w-36 h-36  rounded-full" src="./componentes/images/logoTrabajadordisponible.png" style="margin-left: 40px;" alt=""> <?php } elseif($estado==2){ ?><img class="w-36 h-36  rounded-full" src="./componentes/images/logoTrabajadorocupado.png" style="margin-left: 40px;" alt=""><?php }  ?>
+                                <?PHP if($estado==1){ ?><img class="w-36 h-36  rounded-full imagenAvatar" src="./componentes/images/logoTrabajadordisponible.png" style="margin-left: 40px;" alt=""> <?php } elseif($estado==2){ ?><img class="w-36 h-36  rounded-full imagenAvatar" src="./componentes/images/logoTrabajadorocupado.png" style="margin-left: 40px;" alt=""><?php }  ?>
                     
                         
 
@@ -283,7 +283,7 @@ if (isset($_SESSION['emailuser'])) {
 
                             <br>
                             </figure> 
-                        <h3 class="mb-4 text-xl tracking-tight leading-none   text-blue-600 dark:text-blue-500">Descripción: <?php echo ucfirst(ltrim(rtrim($descripcionUser) ) ); ?></h3>
+                        <h3 class="mb-4 text-xl tracking-tight leading-none   text-blue-600 dark:text-blue-500 descripcionUser">Descripción: <?php echo ucfirst(ltrim(rtrim($descripcionUser) ) ); ?></h3>
                         <h3 class="mb-4 text-xl tracking-tight leading-none   text-blue-600 dark:text-blue-500"><i class='fas fa-hard-hat' style='font-size:24px;color:#F2CD5C;float: left;'></i> <strong><?php echo $oficio; ?></strong></h3>
                     </div>
 
@@ -301,6 +301,7 @@ if (isset($_SESSION['emailuser'])) {
 
 
         </ul>
+        </div>
     </div>
 
 

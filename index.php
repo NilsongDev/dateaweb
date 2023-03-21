@@ -216,13 +216,7 @@ if (isset($_SESSION['emailuser'])) {
             </div>
         </div>
     </nav>
-    
-    <div class="curvaUno">
 
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-            <path fill="#0099ff" fill-opacity="1" d="M0,128L60,154.7C120,181,240,235,360,234.7C480,235,600,181,720,144C840,107,960,85,1080,74.7C1200,64,1320,64,1380,64L1440,64L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path>
-        </svg>
-    </div>
 
     <script>
         function pruebaemail(valor) {
@@ -236,34 +230,82 @@ if (isset($_SESSION['emailuser'])) {
     </script>
 
 
+<!-- 
+    <div class="curvaUno">
+
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#0099ff" fill-opacity="1" d="M0,128L60,154.7C120,181,240,235,360,234.7C480,235,600,181,720,144C840,107,960,85,1080,74.7C1200,64,1320,64,1380,64L1440,64L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path>
+        </svg>
+    </div>
+-->
 
 
 
-    <br>
+    <style>
+
+
+
+
+/* Slideshow container */
+.slideshow-container {
+ 
+  position: relative;
+  margin: auto;
+  
+}
+
+
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+ 
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+
+</style>
+
+<br>
+
 
 
     <!-- Slideshow de las primeras imagenes publicidad -->
     <div class="">
 
-        <div class="slideshow-container">
+        <div class="slideshow-container" >
 
             <!-- Full-width images with number and caption text -->
 
 
-            <div class="mySlides fade">
+            <div class="mySlides fade " >
 
-                <img src="componentes/images/img-construccion2.jpg" style="width:100%;  height: 500px;">
-
-            </div>
-
-            <div class="mySlides fade">
-
-                <img src="componentes/images/img-construccion1.jpg" style="width:100%; height: 500px;">
+                <img class="imgPrincipal" src="componentes/images/img-construccion2.jpg" style="width:100%;  height: 500px; border-radius:10px; ">
 
             </div>
-            <div class="mySlides fade">
 
-                <img src="componentes/images/img-construccion.jpg" style="width:100%; height: 500px;">
+            <div class="mySlides fade ">
+
+                <img class="imgPrincipal" src="componentes/images/img-construccion1.jpg" style="width:100%; height: 500px; border-radius:10px;">
+
+            </div>
+            <div class="mySlides fade ">
+
+                <img class="imgPrincipal" src="componentes/images/img-construccion.jpg" style="width:100%; height: 500px; border-radius:10px;">
 
             </div>
 
@@ -284,6 +326,29 @@ if (isset($_SESSION['emailuser'])) {
 
 
 
+
+    <script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace("active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  setTimeout(showSlides, 5000); // Change image every 2 seconds
+}
+
+
+</script>
 
 
     <br>
@@ -351,18 +416,18 @@ if (isset($_SESSION['emailuser'])) {
     <div class="item-center">
         <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none  md:text-5xl lg:text-6xl text-blue-600 dark:text-blue-500">Búsqueda de Oficio</h1>
 
-        <div class="slideshow-container">
+        <div class="slideshow-container contenedorBusqueda">
 
             <form action="categoriaConsulta.php" method="POST">
 
-                <div class="container perfilesBusqueda">
+                <div class=" perfilesBusqueda cards">
 
 
 
 
                     <div class="perfilselect">
                         <input type="radio" id="myCheckbox8" name="check" value="1" />
-                        <label for="myCheckbox8"><img src="componentes/images/logoTrabajador.png" /></label>
+                        <label for="myCheckbox8"><img  src="componentes/images/logoTrabajador.png" /></label>
                         <strong>
                             <h1> Pintor</h1>
                         </strong>
@@ -405,11 +470,11 @@ if (isset($_SESSION['emailuser'])) {
 
 
 
-                <div class="container perfilesBusqueda">
+                <div class=" perfilesBusqueda cards">
 
 
 
-                    <div class="perfilselect">
+                    <div class="perfilselect card">
                         <input type="radio" id="myCheckbox4" name="check" value="5" />
                         <label for="myCheckbox4"><img src="componentes/images/logoTrabajador.png" /></label>
                         <strong>
@@ -420,7 +485,7 @@ if (isset($_SESSION['emailuser'])) {
 
 
 
-                    <div class="perfilselect">
+                    <div class="perfilselect card">
                         <input type="radio" id="myCheckbox3" name="check" value="6" />
                         <label for="myCheckbox3"><img src="componentes/images/logoTrabajador.png" /></label>
                         <strong>
@@ -428,7 +493,7 @@ if (isset($_SESSION['emailuser'])) {
                         </strong>
                     </div>
 
-                    <div class="perfilselect">
+                    <div class="perfilselect card">
                         <input type="radio" id="myCheckbox1" name="check" value="7" />
 
                         <label for="myCheckbox1"><img src="componentes/images/logoTrabajador.png" /></label>
@@ -439,7 +504,7 @@ if (isset($_SESSION['emailuser'])) {
 
                     </div>
 
-                    <div class="perfilselect">
+                    <div class="perfilselect card">
 
                         <input type="radio" id="myCheckbox2" name="check" value="8" />
 
@@ -482,17 +547,14 @@ if (isset($_SESSION['emailuser'])) {
     </div>
 
 
-
-
+    
 
 
 
 
 
     <style>
-        .perfilesBusqueda {
-            display: inline-flex;
-        }
+        
 
         .perfilselect {
             padding: auto;
@@ -507,9 +569,7 @@ if (isset($_SESSION['emailuser'])) {
             text-align: center;
         }
 
-        .regg {
-            width: 30rem;
-        }
+       
     </style>
 
 
