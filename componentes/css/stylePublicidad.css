@@ -190,6 +190,8 @@
         
     }
 
+
+
  
 }
 
@@ -200,18 +202,39 @@
 
 
 
+.contenedorli {
+  margin-bottom: 4rem;
+  background-color: rgb(59,153 , 255);
+  text-align: center;
+  padding: 1rem;
+  border-radius: 25px;
+  
+}
 
 
 
+.imagenAvatar{
+   
+  margin-left: 0px;
+  background-color: white;
+   width: 9rem;
+   height: 9rem;
+ }
 
 
+.textSinResultado{
+  font-size: 4rem;
+}
+
+.textNombre{
+  letter-spacing: 0.3px;
+}
 
 
-
-
-
-
-
+.imgPrincipal{
+  height: 500px;
+   
+}
 
 
 
@@ -288,7 +311,6 @@
 
 
 
-
 li{list-style: none;}
 
 
@@ -346,7 +368,7 @@ li{list-style: none;}
     
   }
   .contenedorli{
-    max-width: 180px;
+    max-width: 160px;
     
     
   }
@@ -354,8 +376,8 @@ li{list-style: none;}
  
 
   .imgPrincipal{
-    width: 40%;
-    height: auto;
+    height: 300px;
+     
   }
 
   .container {
@@ -383,7 +405,7 @@ li{list-style: none;}
   }
   
 .cards {
-  width: 203px;
+  
   margin: 0 auto;
   display: grid;
   gap: 1rem;
@@ -395,7 +417,7 @@ li{list-style: none;}
     padding: 0;
     margin:0;
     border: 0;
-    width: 100px;
+    width: 130px;
    
   }
 
@@ -447,9 +469,52 @@ li{list-style: none;}
   }
 
   .imagenAvatar{
-
-
+   
+   margin-left: 0px;
+   background-color: white;
+    width: 9rem;
+    height: 8rem;
   }
+
+
+
+
+  
+  element.style {
+    margin-left: 15px;
+}
+
+
+.w-36 {
+  width: 2rem;
+}
+
+.h-36 {
+  height: 1rem;
+}
+
+
+
+.estadoUser{
+  left: 1rem;
+}
+
+
+
+.mb-4{
+  font-size: 12px;
+}
+
+
+.contenedorli {
+  margin-bottom: 1rem;
+
+}
+
+
+
+
+
 }
 
 
@@ -464,3 +529,6 @@ li{list-style: none;}
 .perfilesBusqueda {
   display: inline-flex;
 }
+
+
+

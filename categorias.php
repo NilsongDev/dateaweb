@@ -178,15 +178,10 @@ if (isset($_SESSION['emailuser'])) {
 
             margin: 5rem;
            
+            
         }
 /* div para editar perfil de usuario */
-        .contenedorli {
-            margin-bottom: 4rem;
-           background-color: #FFF1DC;
-            text-align: center;
-            padding: 1rem;
-            border-radius: 25px;
-        }
+     
 
         .perfiluser {
             padding: 5rem 5rem;
@@ -258,14 +253,14 @@ if (isset($_SESSION['emailuser'])) {
             
                 <li class="contenedorli">
                     <div class="textoperfil">
-                        <h1 class="mb-4 text-xl tracking-tight leading-none   text-blue-600 dark:text-blue-500"><i class='fas fa-portrait' style='font-size:36px;color:#33B2FF ;float: left;'></i> <strong> <?php echo ucfirst($nombreuser)  . " " . ucfirst($apellidouser) ; ?></strong> </h1><br>
-                        <h3 class="mb-4 text-xl tracking-tight leading-none   text-blue-600 dark:text-blue-500"><i class="fa fa-whatsapp" style="font-size:36px;color:green;float: left;"></i> <a target="_blank" href="https://api.whatsapp.com/send?phone=+569<?php echo $telefonouser;?>; &text=<?php echo "Hola, ".trim(ucfirst($nombreuser)) ." ".trim(ucfirst($apellidouser))." de Datea.cl, consulto si tiene disponibilidad de trabajar."; ?>."> <strong> +569-<?php echo $telefonouser;?></strong></a></h3><br>
-                        <h3 class="mb-4 text-xl  tracking-tight leading-none   text-blue-600 dark:text-blue-500"><i class='fas fa-map-marker-alt' style='font-size:36px;color:#33B2FF ;float: left;'></i><strong> <?php echo $comunauser; ?></strong></h3><br>
+                        <h1 class="mb-4  tracking-tight leading-none   text-white "><i class='fas fa-portrait' style='font-size:36px;color:white ;float: left;'></i> <strong class="textNombre"> <?php echo ucfirst($nombreuser)  . " " . ucfirst($apellidouser) ; ?></strong> </h1><br>
+                        <h3 class="mb-4  tracking-tight leading-none   text-white "><i class="fa fa-whatsapp" style="font-size:36px;color:green;float: left;"></i> <a target="_blank" href="https://api.whatsapp.com/send?phone=+569<?php echo $telefonouser;?>; &text=<?php echo "Hola, ".trim(ucfirst($nombreuser)) ." ".trim(ucfirst($apellidouser))." de Datea.cl, consulto si tiene disponibilidad de trabajar."; ?>."> <strong > +569-<?php echo $telefonouser;?></strong></a></h3><br>
+                        <h3 class="mb-4   tracking-tight leading-none   text-white "><i class='fas fa-map-marker-alt' style='font-size:36px;color:orange ;float: left;'></i><strong class="textNombre"> <?php echo $comunauser; ?></strong></h3><br>
                     </div>
 
-                    <div class="relative perfilselect" style="background-color: #FEFCF3; padding: 10px 10px; border-radius: 10px;">
+                    <div class="relative perfilselect" style="background-color: #FEFCF3; padding: 10px 10px; border-radius: 10px; opacity: 0.8;">
                         
-                                <?PHP if($estado==1){ ?><img class="w-36 h-36  rounded-full imagenAvatar" src="./componentes/images/logoTrabajadordisponible.png" style="margin-left: 40px;" alt=""> <?php } elseif($estado==2){ ?><img class="w-36 h-36  rounded-full imagenAvatar" src="./componentes/images/logoTrabajadorocupado.png" style="margin-left: 40px;" alt=""><?php }  ?>
+                                <?PHP if($estado==1){ ?><img class=" rounded-full imagenAvatar" src="./componentes/images/logoTrabajadordisponible.png"  alt=""> <?php } elseif($estado==2){ ?><img class=" rounded-full imagenAvatar" src="./componentes/images/logoTrabajadorocupado.png"  alt=""><?php }  ?>
                     
                         
 
@@ -274,17 +269,17 @@ if (isset($_SESSION['emailuser'])) {
                         <figure id="photo" title="<?PHP if($estado==1){ echo "Disponible";}elseif($estado==2){ echo "Ocupado";}  ?>" tooltip-dir="left">
 
                         <?php if (intval($estado) == 1) { ?>
-                            <span class="top-5 left-12 absolute  w-3.5 h-3.5 bg-green-400 border-2 border-white dark:border-gray-800 rounded-full"></span>
+                            <span class="top-5  absolute  w-3.5 h-3.5 bg-green-400 border-2 border-white dark:border-gray-800 rounded-full estadoUser" style=""></span>
                         <?php   } else {    ?>
 
-                            <span class="top-5 left-12 absolute  w-3.5 h-3.5 bg-red-400 border-2 border-white dark:border-gray-800 rounded-full"></span>
+                            <span class="top-5  absolute  w-3.5 h-3.5 bg-red-400 border-2 border-white dark:border-gray-800 rounded-full estadoUser"></span>
 
                         <?php } ?>
 
                             <br>
                             </figure> 
-                        <h3 class="mb-4 text-xl tracking-tight leading-none   text-blue-600 dark:text-blue-500 descripcionUser">Descripción: <?php echo ucfirst(ltrim(rtrim($descripcionUser) ) ); ?></h3>
-                        <h3 class="mb-4 text-xl tracking-tight leading-none   text-blue-600 dark:text-blue-500"><i class='fas fa-hard-hat' style='font-size:24px;color:#F2CD5C;float: left;'></i> <strong><?php echo $oficio; ?></strong></h3>
+                        <h3 class="mb-4 text-xl tracking-tight leading-none   text-blue-800 dark:text-blue-500 descripcionUser" style="opacity: 1;">Descripción: <?php echo ucfirst(ltrim(rtrim($descripcionUser) ) ); ?></h3>
+                        <h3 class="mb-4 text-xl tracking-tight leading-none   text-blue-600 dark:text-blue-500"><i class='fas fa-hard-hat' style='font-size:24px;color:#F2CD5C;float: left; opacity: 1;'></i> <strong><?php echo $oficio; ?></strong></h3>
                     </div>
 
 

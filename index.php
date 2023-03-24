@@ -294,18 +294,18 @@ if (isset($_SESSION['emailuser'])) {
 
             <div class="mySlides fade " >
 
-                <img class="imgPrincipal" src="componentes/images/img-construccion2.jpg" style="width:100%;  height: 500px; border-radius:10px; ">
+                <img class="imgPrincipal" src="componentes/images/img-construccion2.jpg" style="width:100%;   border-radius:10px; ">
 
             </div>
 
             <div class="mySlides fade ">
 
-                <img class="imgPrincipal" src="componentes/images/img-construccion1.jpg" style="width:100%; height: 500px; border-radius:10px;">
+                <img class="imgPrincipal" src="componentes/images/img-construccion1.jpg" style="width:100%;  border-radius:10px;">
 
             </div>
             <div class="mySlides fade ">
 
-                <img class="imgPrincipal" src="componentes/images/img-construccion.jpg" style="width:100%; height: 500px; border-radius:10px;">
+                <img class="imgPrincipal" src="componentes/images/img-construccion.jpg" style="width:100%; border-radius:10px;">
 
             </div>
 
@@ -470,7 +470,7 @@ function showSlides() {
 
 
 
-                <div class=" perfilesBusqueda cards">
+                <div class="ds perfilesBusqueda cards">
 
 
 

@@ -71,7 +71,7 @@ if(isset($_POST['check'])){
             case 7:
                 $electro1="Electrico";
                 $electro=trim($electro1);
-                $select2 = "SELECT * from perfilusuario inner join oficio_user on oficio_user.fk_oficio_user = perfilusuario.codigologin inner join estado_user on estado_user.estado_fk=perfilusuario.codigologin where perfilusuario.comunausuario = '$resultadoComuna' and oficio_user.nombre_oficio like'%$electrico%'";
+                $select2 = "SELECT * from perfilusuario inner join oficio_user on oficio_user.fk_oficio_user = perfilusuario.codigologin inner join estado_user on estado_user.estado_fk=perfilusuario.codigologin where perfilusuario.comunausuario = '$resultadoComuna' and oficio_user.nombre_oficio like'%$electro%'";
                 $resultado1 = pg_query($conexion, $select2);
                 break;
     
@@ -291,9 +291,9 @@ if(isset($_POST['check'])){
         }
 
         .contenedorli {
-            margin-bottom: 4rem;
-            background-color: #FFF1DC;
-            text-align: center;
+           
+          
+           
             padding: 1rem;
             border-radius: 25px;
         }
@@ -332,7 +332,7 @@ if(pg_num_rows($resultado1)==0){
 
 
     <div style="text-align:center">
-         <h1 class="mb-8 text-8xl font-extrabold tracking-tight leading-none  md:text-8xl lg:text-8xl text-blue-600 dark:text-blue-500"> Sin Resultados</h1>
+         <h1 class="mb-8  font-extrabold tracking-tight leading-none  md:text-8xl lg:text-8xl text-blue-600 dark:text-blue-500 textSinResultado"> Sin Resultados</h1>
     <br>
         <span class="img-container">
             <img class="imgContainer" src="../sistemaWebTesis/componentes/images/sinresultado.png"  id="imagenSinResultado"/>   
@@ -368,26 +368,26 @@ if(pg_num_rows($resultado1)==0){
           
                 <li class="contenedorli">
                     <div class="textoperfil">
-                        <h1 class="mb-4 text-xl tracking-tight leading-none   text-blue-600 dark:text-blue-500"><i class='fas fa-portrait' style='font-size:36px;color:#33B2FF ;float: left;'></i> <strong> <?php echo ucfirst($nombreuser ) . " " . ucfirst($apellidouser) ; ?> </strong></h1><br>
-                        <h3 class="mb-4 text-xl tracking-tight leading-none   text-blue-600 dark:text-blue-500"><i class="fa fa-whatsapp" style="font-size:36px;color:green;float: left;"></i> <a target="_blank" href="https://api.whatsapp.com/send?phone=+569<?php  echo $telefonouser;?>&text=<?php echo "hola, ".trim(ucfirst($nombreuser))." ".trim(ucfirst($apellidouser))."de Datea.cl, consulto si tiene disponibilidad de trabajar."; ?>."> <strong> <?php echo"+569 ".  $telefonouser; ?></strong></a></h3><br>
-                        <h3 class="mb-4 text-xl  tracking-tight leading-none   text-blue-600 dark:text-blue-500"><i class='fas fa-map-marker-alt' style='font-size:36px;color:#33B2FF ;float: left;'></i> <strong><?php echo $comunauser; ?></strong></h3><br>
+                        <h1 class="mb-4  tracking-tight  leading-none text-white"><i class='fas fa-portrait' style='font-size:36px;color:white ;float: left;'></i> <strong class="textNombre"> <?php echo ucfirst($nombreuser ) . " " . ucfirst($apellidouser) ; ?> </strong></h1><br>
+                        <h3 class="mb-4  tracking-tight leading-none   text-white"><i class="fa fa-whatsapp" style="font-size:36px;color:green;float: left;"></i> <a target="_blank" href="https://api.whatsapp.com/send?phone=+569<?php  echo $telefonouser;?>&text=<?php echo "hola, ".trim(ucfirst($nombreuser))." ".trim(ucfirst($apellidouser))."de Datea.cl, consulto si tiene disponibilidad de trabajar."; ?>."> <strong> <?php echo"+569 ".  $telefonouser; ?></strong></a></h3><br>
+                        <h3 class="mb-4   tracking-tight leading-none   text-white"><i class='fas fa-map-marker-alt' style='font-size:36px;color:orange ;float: left;'></i> <strong class="textNombre"><?php echo $comunauser; ?></strong></h3><br>
                       
                     </div>
 
-                    <div class="relative perfilselect " style="background-color: #FEFCF3; padding: 10px 10px; border-radius: 10px;">
-                    <?PHP if($estado==1){ ?><img class="w-36 h-36  rounded-full" src="./componentes/images/logoTrabajadordisponible.png" style="margin-left: 40px;" alt=""> <?php } elseif($estado==2){ ?><img class="w-36 h-36  rounded-full" src="./componentes/images/logoTrabajadorocupado.png" style="margin-left: 40px;" alt=""><?php }  ?>
+                    <div class="relative perfilselect " style="background-color: #FEFCF3; padding: 10px 10px; border-radius: 10px; opacity: 0.8;">
+                    <?PHP if($estado==1){ ?><img class="  rounded-full imagenAvatar" src="./componentes/images/logoTrabajadordisponible.png"  alt=""> <?php } elseif($estado==2){ ?><img class=" rounded-full imagenAvatar" src="./componentes/images/logoTrabajadorocupado.png"  alt=""><?php }  ?>
 
                         <figure id="photo" title="<?PHP if($estado==1){ echo "Disponible";}elseif($estado==2){ echo "Ocupado";}  ?>" tooltip-dir="left">
 
                         <?php if(intval($estado)==1 ){  ?>
-                        <span class="estado top-5 left-12 absolute  w-3.5 h-3.5 bg-green-400 border-2 border-white dark:border-gray-800 rounded-full"></span>
+                        <span class=" top-5  absolute  w-3.5 h-3.5 bg-green-400 border-2 border-white dark:border-gray-800 rounded-full estadoUser"></span>
                         <?php   }else{    ?>
 
-                            <span class="top-5 left-12 absolute  w-3.5 h-3.5 bg-red-400 border-2 border-white dark:border-gray-800 rounded-full"></span>   
+                            <span class="top-5  absolute  w-3.5 h-3.5 bg-red-400 border-2 border-white dark:border-gray-800 rounded-full estadoUser"></span>   
                         
                             <?php }?><br>
                             </figure> 
-                        <h3 class="mb-4 text-xl tracking-tight leading-none   text-blue-600 dark:text-blue-500">Descripción: <?php echo ucfirst(ltrim(rtrim($descripcionUser) ) ); ?></h3>
+                        <h3 class="mb-4 text-xl tracking-tight leading-none   text-blue-600 dark:text-blue-500" style="opacity: 1;" >Descripción: <?php echo ucfirst(ltrim(rtrim($descripcionUser) ) ); ?></h3>
                         <h3 class="mb-4 text-xl tracking-tight leading-none   text-blue-600 dark:text-blue-500"><i class='fas fa-hard-hat' style='font-size:24px;color:#F2CD5C;float: left;'></i>  <strong><?php echo $oficio; ?></strong></h3>
                     </div>
 
@@ -419,6 +419,41 @@ if(pg_num_rows($resultado1)==0){
 
 
   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
