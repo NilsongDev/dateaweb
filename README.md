@@ -29,4 +29,5 @@ registrarse
 
 
 perfil user
-![Captura de pantalla 2023-03-23 165610](https://user-images.githubusercontent.com/102773023/227336438-99a77a0a-af15-42ae-867a-17beb0bb53d8.jpg)
+![Captura de pantalla 2023-03-27 173828userperfil](https://user-images.githubusercontent.com/102773023/228061053-f459baea-e01c-4482-add7-02359cca5ef6.jpg)
+
