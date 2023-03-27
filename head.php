@@ -7,13 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bienvenido DATEA</title>
 
-    <link rel="stylesheet" href="componentes/css/stylePublicidad.css">
+    <link rel="stylesheet" href="/sistemaWebTesis/componentes/css/stylePublicidad.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.3/dist/flowbite.min.css" />
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.5.0/dist/css/splide.min.css">
 
-    <link rel="stylesheet" href="componentes/css/countuser.css">
+    <link rel="stylesheet" href="/sistemaWebTesis/componentes/css/countuser.css">
 
 
 
@@ -21,4 +21,8 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
 
+
+    
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 </head>

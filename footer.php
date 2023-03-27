@@ -3,7 +3,7 @@
         <div class="md:flex md:justify-between ">
             <div class="mb-6 md:mb-0">
                 <a href="#" class="flex items-center">
-                    <img src="componentes/images/logooobueno.png" class="mr-3 h-8" alt="FlowBite Logo" />
+                <img src="/sistemaWebTesis/componentes/images/logooobueno.png" class="mr-3 h-8" alt="FlowBite Logo" />
                     <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Datea.cl</span>
                 </a>
             </div>
@@ -12,7 +12,7 @@
                     <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Sobre Nosotros</h2>
                     <ul class="text-gray-600 dark:text-gray-400">
                         <li class="mb-4">
-                            <a href="../sistemaWebTesis/quienessomos.php" class="hover:underline">Quiénes Somos</a>
+                            <a href="/sistemaWebTesis/quienessomos.php" class="hover:underline">Quiénes Somos</a>
                         </li>
 
                     </ul>
@@ -21,7 +21,7 @@
                     <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Mesa de Ayuda</h2>
                     <ul class="text-gray-600 dark:text-gray-400">
                         <li class="mb-4">
-                            <a href="contacto.php" class="hover:underline ">Contacto</a>
+                            <a href=" /sistemaWebTesis/contacto.php" class="hover:underline ">Contacto</a>
                         </li>
 
                     </ul>
@@ -30,10 +30,10 @@
                     <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Legal</h2>
                     <ul class="text-gray-600 dark:text-gray-400">
                         <li class="mb-4">
-                            <a href="politicas.php" class="hover:underline">Política de Privacidad</a>
+                            <a href="/sistemaWebTesis/politicas.php" class="hover:underline">Política de Privacidad</a>
                         </li>
                         <li>
-                            <a href="terminos.php" class="hover:underline">Términos &amp; Condiciones</a>
+                            <a href="/sistemaWebTesis/terminos.php" class="hover:underline">Términos &amp; Condiciones</a>
                         </li>
                     </ul>
                 </div>
