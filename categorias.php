@@ -145,7 +145,7 @@ if (isset($_SESSION['emailuser'])) {
                         <figure id="photo" title="<?PHP if($estado==1){ echo "Disponible";}elseif($estado==2){ echo "Ocupado";}  ?>" tooltip-dir="left">
 
                         <?php if (intval($estado) == 1) { ?>
-                            <span class="top-5  absolute  w-3.5 h-3.5 bg-green-400 border-2 border-white dark:border-gray-800 rounded-full estadoUser" style=""></span>
+                            <span class="top-5  absolute  w-3.5 h-3.5 bg-green-400 border-2 border-white dark:border-gray-800 rounded-full estadoUser" ></span>
                         <?php   } else {    ?>
 
                             <span class="top-5  absolute  w-3.5 h-3.5 bg-red-400 border-2 border-white dark:border-gray-800 rounded-full estadoUser"></span>

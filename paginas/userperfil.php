@@ -1,5 +1,6 @@
 <?php
 session_start();
+error_reporting(0);
 $idsesion =  $_SESSION['numeroIDlogin'];
 include('conexion/database.php');
 $consulta = "SELECT * from perfilusuario inner join especialidad_user on especialidad_user.fk_oficio_perfil = perfilusuario.codigologin inner join loginuser on loginuser.idlogin = perfilusuario.codigologin  where perfilusuario.codigologin='$idsesion' ";
@@ -18,6 +19,10 @@ $id = intval($idsesion);
 $disponibilidad = "SELECT estado_disponible from estado_user inner join perfilusuario on perfilusuario.codigologin = estado_user.estado_fk where perfilusuario.codigologin='$id'";
 $consultaEstado = pg_query($conexion, $disponibilidad);
 
+if( $_SESSION['numeroIDlogin']==''){
+    header("refresh:1;url=login.php");
+
+}else{
 
 
 
@@ -469,22 +474,23 @@ if ($queryconsulta) {
         </div>
         <br><br>
     </div>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <?php include('../footer.php');?> 
+    
     <?php
-
+}
     ?>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <?php include('../footer.php');?>
