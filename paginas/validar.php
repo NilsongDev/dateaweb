@@ -37,7 +37,6 @@ $dato = $password;
 
 
 
-
 $consulta = "SELECT * FROM loginuser WHERE username='$usuario' AND password1='$dato_encriptado'";
 
 $rs = pg_query($conexion, $consulta);
@@ -77,7 +76,7 @@ if ($fila) {
 
         $_SESSION['numeroIDlogin'] = $numeroIDuser;
 
-
+       
 
 ?>
         <html>
@@ -106,9 +105,25 @@ if ($fila) {
 
 
         //header("refresh:1;url=llenardatosperfil.php");
+        $consultaEstadoUser = "SELECT estado_email from validar_email where pkuser_email ='$numeroIDuser'";
+        $estadoUsuario = pg_query($conexion,  $consultaEstadoUser );
+        
+     
+        while($row= pg_fetch_assoc($estadoUsuario)){
+          $estadoActual = $row["estado_email"];
+          
+          if(trim($estadoActual)=='no' ){
+            
+            header("refresh:1;url=/sistemawebtesis/codigovalidaremail.php");
+
+          }else{
+            header("refresh:1;url=userperfil.php");
+          }
+
+        }
 
 
-        header("refresh:1;url=userperfil.php");
+        
       }
     }
   }

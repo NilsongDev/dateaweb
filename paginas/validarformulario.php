@@ -1,5 +1,18 @@
 <?php
 
+use PHPMailer\PHPMailer\PHPMailer;
+
+use PHPMailer\PHPMailer\Exception;
+
+
+require 'phpmailer/src/Exception.php';
+require 'phpmailer/src/PHPMailer.php';
+require 'phpmailer/src/SMTP.php';
+
+
+
+
+
 $emailUsuario = $_POST['emailUser'];
 $passUsuario1 = $_POST['password1'];
 $passUsuario2 = $_POST['password2'];
@@ -76,7 +89,7 @@ if(pg_num_rows($res)>0){
             Swal.fire({
 
                 icon: 'success',
-                title: 'Bienvenido, USUARIO AGREGADO',
+                title: 'Cuenta creada',
                 showConfirmButton: false,
                 timer: 1500
             })
@@ -111,7 +124,7 @@ if(pg_num_rows($res)>0){
 
 
 
-        echo "USUARIO AGREGADO";
+        
         $consulta = "INSERT INTO loginuser (username,password1,password2) Values ('$emailUsuario','$dato_encriptado ','$dato_encriptado ')";
         $resultado = pg_query($conexion, $consulta);
 
@@ -146,6 +159,46 @@ if(pg_num_rows($res)>0){
                     $ingreso = pg_query($conexion, $agrega_tipo_user);
                     
                     $ingreso = pg_query($conexion, $agrega_oficio_user);
+
+
+
+                    $codigoEmail  = random_int(100000, 999999); 
+
+                    
+                    
+                    
+                    
+
+                    $mail = new PHPMailer(true);
+
+                    $mail->isSMTP();
+                
+                    $mail->Host = 'smtp.gmail.com';
+                    $mail->SMTPAuth=true;
+                    $mail ->Username='datea.conce@gmail.com';
+                    $mail ->Password='jpcgvryhzcmsreyt';
+                    $mail->SMTPSecure ='ssl';
+                    $mail->Port=465;
+                
+                    $mail->setFrom('datea.conce@gmail.com');
+                
+                    $mail->addAddress($_POST['emailUser']);
+                    $mail->isHTML(true);
+                    $mail->Subject = "Validar email en Datea.cl";
+                    $mail->Body = "El código para validar el email es : ".$codigoEmail;
+                
+                    $mail->send();
+
+
+                    $estadoEmail='no';
+
+
+
+
+                    $emailValidacion= "INSERT INTO validar_email (estado_email,codigo_email,pkuser_email,email_user) Values ('$estadoEmail',' $codigoEmail ','$numeroIDuser ','$emailUsuario ')";
+                    $resultado = pg_query($conexion, $emailValidacion);
+
+
                     header("refresh:1;url=login.php");
                 }
             }

@@ -28,7 +28,6 @@ if (isset($_SESSION['emailuser'])) {
 
 
 
-
 ?>
 
 <?php include('head.php');?>

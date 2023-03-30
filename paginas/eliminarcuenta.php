@@ -39,6 +39,12 @@ pg_query($conexion, $consulta7);
 $consulta1 = "DELETE FROM loginuser WHERE idlogin = $id";
  pg_query($conexion, $consulta1);
 
+
+ $consulta1 = "DELETE FROM validar_email WHERE pkuser_email = $id";
+ pg_query($conexion, $consulta1);
+
+
+
 session_destroy();
 header("refresh:0;url=../index.php");
 
