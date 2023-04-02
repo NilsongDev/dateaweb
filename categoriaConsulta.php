@@ -250,7 +250,7 @@ if(pg_num_rows($resultado1)==0){
                 <li class="contenedorli">
                     <div class="textoperfil">
                         <h1 class="mb-4  tracking-tight  leading-none text-white"><i class='fas fa-portrait' style='font-size:36px;color:white ;float: left;'></i> <strong class="textNombre"> <?php echo ucfirst($nombreuser ) . " " . ucfirst($apellidouser) ; ?> </strong></h1><br>
-                        <h3 class="mb-4  tracking-tight leading-none   text-white"><i class="fa fa-whatsapp" style="font-size:36px;color:green;float: left;"></i> <a target="_blank" href="https://api.whatsapp.com/send?phone=+569<?php  echo $telefonouser;?>&text=<?php echo "hola, ".trim(ucfirst($nombreuser))." ".trim(ucfirst($apellidouser))."de Datea.cl, consulto si tiene disponibilidad de trabajar."; ?>."> <strong> <?php echo"+569 ".  $telefonouser; ?></strong></a></h3><br>
+                        <h3 class="mb-4  tracking-tight leading-none   text-white"><i class="fa fa-whatsapp" style="font-size:36px;color:green;float: left;"></i> <a target="_blank" href="https://api.whatsapp.com/send?phone=+569<?php  echo $telefonouser;?>&text=<?php echo "Hola, ".trim(ucfirst($nombreuser))." ".trim(ucfirst($apellidouser))." de Datea.cl, consulto si tiene disponibilidad de trabajar."; ?>"> <strong> <?php echo"+569 ".  $telefonouser; ?></strong></a></h3><br>
 
                         <h3 class="mb-4   tracking-tight leading-none   text-white"><i class='fas fa-map-marker-alt' style='font-size:36px;color:orange ;float: left;'></i> <strong class="textNombre"><?php echo $comunauser; ?></strong></h3><br>
                       

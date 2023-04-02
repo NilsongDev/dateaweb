@@ -181,11 +181,47 @@ if(pg_num_rows($res)>0){
                     $mail->Port=465;
                 
                     $mail->setFrom('datea.conce@gmail.com');
-                
+                    $mail->CharSet = 'UTF-8';
                     $mail->addAddress($_POST['emailUser']);
                     $mail->isHTML(true);
                     $mail->Subject = "Validar email en Datea.cl";
-                    $mail->Body = "El código para validar el email es : ".$codigoEmail;
+                   // $mail->Body = "El código para validar el email es : ".$codigoEmail;
+
+
+                    $mail->Body='<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+                    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+            <html xmlns="http://www.w3.org/1999/xhtml">
+            <head>
+                <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+                <meta name="viewport" content="width=device-width, initial-scale=1"/>
+                <title>Código Datea.cl</title>
+                <style type="text/css">
+                    h1{
+                        color: #8bc34a;
+                    }
+                    p{
+                        font-size: 1rem;
+                    }
+                    img{
+                        width: 10rem;
+                        height: 10rem;
+                    }
+                </style>
+            </head>
+            <body>
+            <h1>Gracias por registrarte en Datea.cl </h1>
+            <p>Hola, usuario/a. Ingresa este código para validar tu cuenta : <h1>'.$codigoEmail.'</h1></p>
+            <p>
+            Inicia sesión para validar cuenta en : <a href="http://localhost/sistemawebtesis/index.php"> Datea.cl</a>
+            </p>
+            
+            <img src="https://i.postimg.cc/DZZMGWkD/logo-Trabajador.png">
+            </body>';
+
+
+
+
+
                 
                     $mail->send();
 
