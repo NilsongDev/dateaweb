@@ -1,15 +1,14 @@
-![Captura de pantalla 2023-03-23 164427](https://user-images.githubusercontent.com/102773023/227334281-c6a2f811-d0b5-4725-8f81-a553d5d7d80d.jpg)
+
 # dateaweb
-Prototipo de usn sistema web, para la publicacion de oficios de trabajo.
+Prototipo de usn sistema web, para la publicacion de oficios de trabajo relacionados al area de la construccion.
 Consiste en que un usuario pueda ofreceser su oficio los cuales son
-pintor, albañil,electrico,carpintero,ceramista,estructurero,gasfiter,soldador
-donde tiene un formulario de registro y un login de iniciar sesion
-una vez ingresado puede actualizar su informacion personlas
-la cual es nombre, apelliedo, numero de telefono, comuna, oficio. como tambien una breve descripcion 
-este mini perfil se publica en una especia de catalogo donde podran revisar los perfiles ingresados.
+pintor, albañil,electrico,carpintero,ceramista,estructurero,gasfiter,soldador.
+donde tiene que llenar un formulario para registrarse y cuenta con un login para iniciar sesion.
+una vez ingresado puede actualizar su informacion personal la cual es nombre, apelliedo, numero de telefono, comuna, oficio. como tambien una breve descripcion 
+donde tendra un mini perfil, se publicara en un catalogo donde se podra revisar los perfiles ingresados o buscarlos por oficio y comuna.
+![Captura de pantalla 2023-03-23 164427](https://user-images.githubusercontent.com/102773023/227334281-c6a2f811-d0b5-4725-8f81-a553d5d7d80d.jpg)
 
-
-propaganda para por comuna
+propaganda lista de usuarios por comuna
 ![Captura de pantalla 2023-03-23 164455](https://user-images.githubusercontent.com/102773023/227335758-970b5c1b-9537-4bc9-ad28-d040d418dc84.jpg)
 
 
