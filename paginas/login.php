@@ -44,10 +44,10 @@ session_start(); ?>
 
 
 
+<br><br>
 
 
-
-    <div class="font-sans">
+    <div class="font-sans ">
         <div class="relative p-20 flex flex-col sm:justify-center items-center ">
             <div class="relative sm:max-w-sm w-full">
                 <div class="card bg-blue-400 shadow-lg  w-full h-full rounded-3xl absolute  transform -rotate-6"></div>
@@ -93,7 +93,7 @@ session_start(); ?>
 
 
 
-
+<br><br><br><br><br><br><br>
 
 
 

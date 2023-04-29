@@ -179,7 +179,7 @@ $ceramista="Ceramista";
 
 
 
-        <div class="   relative p-20 flex flex-col sm:justify-center items-center">
+        <div  class="   relative p-20 flex flex-col sm:justify-center items-center">
 
 
             <div class="md:flex no-wrap  ">
@@ -191,12 +191,12 @@ $ceramista="Ceramista";
 
                     <div class="w-full md:w-9/12 mx-2">
 
-                        <div class="w-full   md:grid-cols-5">
+                        <div  class="w-full   md:grid-cols-5">
                             <!-- Profile Card -->
                             <div class="bg-white p-3 border-t-4  ">
 
                                 <h3 class="text-gray-600 font-lg text-semibold  leading-10">Descripción breve : </h3>
-                                <input type="text" placeholder="texto" class="w-full" name="descripcionusuario" maxlength="99" value="<?php echo ucfirst(rtrim(ltrim($descripcionUsuario))) ; ?>">
+                                <input  type="text" placeholder="texto" class="w-full" name="descripcionusuario" maxlength="99" value="<?php echo ucfirst(rtrim(ltrim($descripcionUsuario))) ; ?>">
 
                             </div>
                             <!-- End of profile card -->
@@ -247,7 +247,7 @@ $ceramista="Ceramista";
 
 
 
-                                <div class="grid md:grid-cols-5 text-sm">
+                                <div class="grid md:grid-cols-2 text-sm">
                                     <div class=" grid-cols-2">
                                         <div class="px-4 py-2 font-semibold"> NOMBRE</div>
                                         <div class="px-4 py-2"><input type="text" name="nombreusuario" maxlength="50" value="<?php echo trim($nombreUsuario);  ?>"        onkeypress="return soloLetras(event)" onblur="limpia()" id="miInput"     > </div>
@@ -261,7 +261,7 @@ $ceramista="Ceramista";
 
                                   
 
-                               
+                                  
 
 
                                     <!-- 
@@ -281,9 +281,9 @@ $ceramista="Ceramista";
 
                                 <div class="grid md:grid-cols-5 text-sm">
 
-                                    <div class="grid grid-cols-2">
+                                    <div class="grid-cols-2">
                                             <div class="px-4 py-2 font-semibold">NÚMERO CONTACTO</div>
-                                            <div class="px-4 py-2"><input type="text" name="telefonousuario" pattern="[0-9]+" minlength="8" maxlength="8" value="<?php echo $telefonoUsuario;  ?>" onKeypress="if (event.keyCode < 45 || event.keyCode > 57) event.returnValue = false;"> </div>
+                                            <div class="px-4 py-2"><input  type="text" name="telefonousuario" pattern="[0-9]+" minlength="8" maxlength="8" value="<?php echo $telefonoUsuario;  ?>" onKeypress="if (event.keyCode < 45 || event.keyCode > 57) event.returnValue = false;"> </div>
                                         </div>
 
                                   
@@ -315,12 +315,12 @@ $ceramista="Ceramista";
                         </div>
                         <!-- End of about section -->
 
-
+                                    <br>
 
 
                         <div class="comunas">
                             <h1>SELECCIONAR COMUNA</h1>
-                            <select class="names regg container p-3 m-6" name="comunas">
+                            <select class="names regg container p-3 " name="comunas">
                                 <option name="comunausuario"  value="">Seleccionar Comuna</option>
 
 
@@ -493,7 +493,7 @@ $ceramista="Ceramista";
 
 
 
-
+                                                <br>
 
 
                         <div class="bg-white p-3 shadow-sm rounded-sm">

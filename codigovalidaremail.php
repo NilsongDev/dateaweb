@@ -29,7 +29,7 @@
 <br>
 
      <div class="item-center">
-         <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none  md:text-5xl lg:text-6xl text-blue-600 dark:text-blue-500 texto">Ingresar codigo para activar tu cuenta</h1>
+         <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none  md:text-5xl lg:text-6xl text-blue-600 dark:text-blue-500 texto">Ingresar el código para activar tu cuenta.</h1>
 
          <div class="slideshow-container contenedorBusqueda">
 

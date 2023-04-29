@@ -32,7 +32,7 @@ if (isset($_SESSION['emailuser'])) {
 
 <?php include('head.php');?>
 
-<body>
+<body  >
 
     <!-- propaganda tipo PopUp de bienvenida y boton de registro -->
     <div id="primerAnuncio" class="anuncio">
@@ -43,10 +43,10 @@ if (isset($_SESSION['emailuser'])) {
                 </div>
                 <aside style="text-align:center">
                     <div class="ttl">
-                        <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none  md:text-5xl lg:text-6xl text-blue-600 dark:text-blue-500">BIENVENIDO A LA COMUNIDAD DE LA CONSTRUCCIÓN DEL</h1>
-                        <h1 class="mb-4 text-4xl font-extrabold inline-block md:text-5xl lg:text-6xl  dark:text-blue-900 text-blue-900">BÍO-BÍO</h1>
+                        <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none  md:text-5xl lg:text-6xl text-blue-600 dark:text-blue-500 animate__animated animate__bounceInLeft">BIENVENIDO A LA COMUNIDAD DE LA CONSTRUCCIÓN DEL</h1>
+                        <h1 class="mb-4 text-4xl font-extrabold inline-block md:text-5xl lg:text-6xl  dark:text-blue-900 text-blue-900 animate__animated animate__bounceInLeft">BÍO-BÍO</h1>
                     </div>
-                    <p class="text-lg font-bold dark:text-gray-400 text-gray-500">Regístrate o sigue nuestras Redes Sociales</p> <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" )> <a href="paginas/formularioRegistro.php">REGISTRATE</a> </button>
+                    <p class="  text-lg font-bold dark:text-gray-400 text-gray-500 ">Regístrate o sigue nuestras Redes Sociales</p> <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" )> <a href="paginas/formularioRegistro.php">REGISTRATE</a> </button>
                 </aside>
                 <ul>
                     <li class="fcb">
@@ -108,15 +108,15 @@ if (isset($_SESSION['emailuser'])) {
     </script>
 
 
-<!-- 
+<!--
     <div class="curvaUno">
 
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
             <path fill="#0099ff" fill-opacity="1" d="M0,128L60,154.7C120,181,240,235,360,234.7C480,235,600,181,720,144C840,107,960,85,1080,74.7C1200,64,1320,64,1380,64L1440,64L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path>
         </svg>
     </div>
--->
 
+    -->
 
 
     <style>
@@ -163,7 +163,7 @@ if (isset($_SESSION['emailuser'])) {
 
 
     <!-- Slideshow de las primeras imagenes publicidad -->
-    <div class="">
+    <div class="" >
 
         <div class="slideshow-container" >
 
@@ -240,7 +240,7 @@ function showSlides() {
 
     <div class=" slideshow-container mt-4">
 
-        <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none  md:text-5xl lg:text-6xl text-blue-600 dark:text-blue-500">Comuna Destacada</h1>
+        <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none  md:text-5xl lg:text-6xl text-blue-600 dark:text-blue-500 animate__bounceIn ">Comuna Destacada</h1>
         <div class="splide bg-secondary">
             <div class="splide__slider">
                 <div class="splide__track">
@@ -254,7 +254,7 @@ function showSlides() {
                         ?>
                                 <li class="splide__slide">
                                     <div class="cardperfil"><img src="componentes/images/perfil_user.jpg" alt="ichabod">
-                                        <div class="cardperfil-detalles"><strong>Nombre: <?php echo ucfirst($row["nombreuser"])  . " " . ucfirst($row["apellidouser"]); ?></strong><span></span><br><span>Comuna: <?php echo $row["comunausuario"]; ?> <br> Oficio: <?php echo ucfirst($row["nombre_oficio"]); ?> <br> Telefono: <a target="_blank" href="https://api.whatsapp.com/send?phone=+569<?php echo $row["telefonouser"]; ?>&text=<?php echo "Hola " . trim(ucfirst($row["nombreuser"])) . " " . trim(ucfirst($row["apellidouser"])) . " de Datea.cl, consulto disponibilidad de trabajo."; ?>"> <?php echo "+569 " .  $row["telefonouser"]; ?></a> </span></div>
+                                        <div class="cardperfil-detalles"><strong>Nombre: <?php echo ucfirst($row["nombreuser"])  . " " . ucfirst($row["apellidouser"]); ?></strong><span></span><br><span>Comuna: <?php echo $row["comunausuario"]; ?> <br> Oficio: <?php echo ucfirst($row["nombre_oficio"]); ?> <br>  <a target="_blank" href="https://api.whatsapp.com/send?phone=+569<?php echo $row["telefonouser"]; ?>&text=<?php echo "Hola " . trim(ucfirst($row["nombreuser"])) . " " . trim(ucfirst($row["apellidouser"])) . " de Datea.cl, consulto disponibilidad de trabajo."; ?>"> <?php echo "+569 " .  $row["telefonouser"]; ?></a> </span></div>
                                     </div>
                                 </li>
 
@@ -292,7 +292,7 @@ function showSlides() {
 
 
     <div class="item-center">
-        <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none  md:text-5xl lg:text-6xl text-blue-600 dark:text-blue-500">Búsqueda de Oficio</h1>
+        <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none  md:text-5xl lg:text-6xl text-blue-600 dark:text-blue-500 animate__bounceIn">Búsqueda de Oficio</h1>
 
         <div class="slideshow-container contenedorBusqueda">
 
@@ -399,7 +399,7 @@ function showSlides() {
 
                 <div class="regiones">
 
-                    <h1 class="mb-2 text-4xl  tracking-tight leading-none   md:text-5xl lg:text-6xl text-blue-600 dark:text-blue-500">Seleccionar Comuna</h1>
+                    <h1 class="mb-2 text-4xl  tracking-tight leading-none   md:text-5xl lg:text-6xl text-blue-600 dark:text-blue-500 animate__bounceIn">Seleccionar Comuna</h1>
 
                     <select class="names regg container p-3 m-6" name="comunas">
                         <option value="Concepción"> Concepción</option>
@@ -465,7 +465,7 @@ function showSlides() {
 
 
     <div class=" mt-4 slideshow-container anchoprueba ">
-        <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none   md:text-5xl lg:text-6xl text-blue-600 dark:text-blue-500">PERSONAS REGISTRADAS</h1>
+        <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none   md:text-5xl lg:text-6xl text-blue-600 dark:text-blue-500 animate__bounceIn">PERSONAS REGISTRADAS</h1>
         <div class="splider bg-secondary ">
 
             <div class="splide__slider">
@@ -482,7 +482,6 @@ function showSlides() {
 
                     <ul class="splide__list">
                         <?php
-
                         if (pg_num_rows($resultadoFinal) > 0) {
                             while ($row = pg_fetch_assoc($resultadoFinal)) {
                                 $row["nombreuser"];
@@ -492,7 +491,7 @@ function showSlides() {
                         ?>
                                 <li class="splide__slide">
                                     <div class="cardperfil"><img src="componentes/images/perfil_user.jpg" alt="ichabod">
-                                        <div class="cardperfil-detalles"><strong>Nombre: <?php echo ucfirst($row["nombreuser"])  . " " . ucfirst($row["apellidouser"]); ?> </strong><span><br> Comuna: <?php echo $row["comunausuario"]; ?> <br> Oficio: <?php echo ucfirst($row["nombre_oficio"]); ?> <br> <a target="_blank" href="https://api.whatsapp.com/send?phone=+569<?php echo $row["telefonouser"]; ?>&text=<?php echo "Hola " . trim(ucfirst($row["nombreuser"])) . " " . trim(ucfirst($row["apellidouser"])) . " de Datea.cl, consulto disponibilidad de trabajo."; ?>"> <strong> <?php echo "+569 " . $row["telefonouser"]; ?></strong> </a> </span></div>
+                                        <div class="cardperfil-detalles"><strong> <?php echo ucfirst($row["nombreuser"])  . " " . ucfirst($row["apellidouser"]); ?> </strong><span><br> Comuna: <?php echo $row["comunausuario"]; ?> <br> Oficio: <?php echo ucfirst($row["nombre_oficio"]); ?> <br> <a target="_blank" href="https://api.whatsapp.com/send?phone=+569<?php echo $row["telefonouser"]; ?>&text=<?php echo "Hola " . trim(ucfirst($row["nombreuser"])) . " " . trim(ucfirst($row["apellidouser"])) . " de Datea.cl, consulto disponibilidad de trabajo."; ?>"> <strong> <?php echo "+569 " . $row["telefonouser"]; ?></strong> </a> </span></div>
                                     </div>
                                 </li>
 
@@ -523,26 +522,14 @@ function showSlides() {
     $totalRegistros = pg_query($conexion, $consultaRegistros);
     $res = pg_num_rows($totalRegistros);
 
-
-
     $consultaDisponibles = "select estado_disponible from estado_user where estado_disponible=1";
     $totalDisponible = pg_query($conexion, $consultaDisponibles);
     $resDisponible = pg_num_rows($totalDisponible);
-
-
-
 
     $consultaOcupados = "select estado_disponible from estado_user where estado_disponible=2";
     $totalOcupados = pg_query($conexion, $consultaOcupados);
     $resOcupados = pg_num_rows($totalOcupados);
     ?>
-
-
-
-
-
-
-
 
     <br><br>
 
@@ -608,6 +595,8 @@ function showSlides() {
                 }, duration);
             });
         </script>
+
+         
 
         <div class="curvaDos">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 300">
