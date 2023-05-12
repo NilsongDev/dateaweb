@@ -83,8 +83,6 @@ if(isset($_POST['check'])){
                 $resultado1 = pg_query($conexion, $select2);
                 break;
         }
-
-
     }
 
     
@@ -100,8 +98,6 @@ if(isset($_POST['check'])){
     //header("refresh:1;url=index.php");
 }else{
     header("refresh:1;url=categoriaConsulta.php");
-    
-   
 }
 
 
@@ -158,35 +154,14 @@ if(isset($_POST['check'])){
         .auto-grid {
             --auto-grid-min-size: 16rem;
 
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr));
-            grid-gap: 1rem;
-            margin: 2rem;
-            padding-bottom: 2rem;
-        }
 
 
-        .containerperfil {
 
-            margin: 5rem;
-        }
 
-        .contenedorli {
-           
-          
-           
-            padding: 1rem;
-            border-radius: 25px;
-        }
 
-        .perfiluser {
-            padding: 5rem 5rem;
-            text-align: center;
-            font-size: 1.2rem;
-            background: #eb4d4b;
-            color: #ffffff;
-        }
-    </style>
+
+
+
 <br><br>
 <?php
 if(pg_num_rows($resultado1)==0){   
@@ -252,14 +227,19 @@ if(pg_num_rows($resultado1)==0){
                         <h1 class="mb-4  tracking-tight  leading-none text-white"><i class='fas fa-portrait' style='font-size:36px;color:white ;float: left;'></i> <strong class="textNombre"> <?php echo ucfirst($nombreuser ) . " " . ucfirst($apellidouser) ; ?> </strong></h1><br>
                         <h3 class="mb-4  tracking-tight leading-none   text-white"><i class="fa fa-whatsapp" style="font-size:36px;color:green;float: left;"></i> <a target="_blank" href="https://api.whatsapp.com/send?phone=+569<?php  echo $telefonouser;?>&text=<?php echo "Hola, ".trim(ucfirst($nombreuser))." ".trim(ucfirst($apellidouser))." de Datea.cl, consulto si tiene disponibilidad de trabajar."; ?>"> <strong> <?php echo"+569 ".  $telefonouser; ?></strong></a></h3><br>
 
-                        <h3 class="mb-4   tracking-tight leading-none   text-white"><i class='fas fa-map-marker-alt' style='font-size:36px;color:orange ;float: left;'></i> <strong class="textNombre"><?php echo $comunauser; ?></strong></h3><br>
-                      
+                                        <ul class="ulDescripcion">
+                                            <li>
+                                                <input type="checkbox" checked>
+                                                <i></i>
+                                                <h2>Descripción</h2>
+                                                <p><?php echo ucfirst(ltrim(rtrim($descripcionUser))); ?></p>
+                                                <p>Comuna: <?php echo $comunauser; ?></p>
+                                                <p>Telefono: +569-<?php echo $telefonouser; ?></p>
+                                                <?PHP if ($estado == 1) { ?><img class=" rounded-full  " style=" width: 100px; margin-left: 40%;" src="./componentes/images/logoTrabajadordisponible.png" alt=""> <?php } elseif ($estado == 2) { ?><img class=" rounded-full " style=" width: 100px; margin-left: 40%;" src="./componentes/images/logoTrabajadorocupado.png" alt=""><?php }  ?>
+
                     </div>
 
-                    <div class="relative perfilselect " style="background-color: #FEFCF3; padding: 10px 10px; border-radius: 10px; opacity: 0.8;">
-                    <?PHP if($estado==1){ ?><img class="  rounded-full imagenAvatar" src="./componentes/images/logoTrabajadordisponible.png"  alt=""> <?php } elseif($estado==2){ ?><img class=" rounded-full imagenAvatar" src="./componentes/images/logoTrabajadorocupado.png"  alt=""><?php }  ?>
 
-                        <figure id="photo" title="<?PHP if($estado==1){ echo "Disponible";}elseif($estado==2){ echo "Ocupado";}  ?>" tooltip-dir="left">
 
                         <?php if(intval($estado)==1 ){  ?>
                         <span class=" top-5  absolute  w-3.5 h-3.5 bg-green-400 border-2 border-white dark:border-gray-800 rounded-full estadoUser"></span>
@@ -274,17 +254,9 @@ if(pg_num_rows($resultado1)==0){
                     </div>
 
 
-                </li>
-
-            <?php
-
-            } 
 
 
-        }else{
-            header("refresh:0;url=index.php");
 
-        }
             
             
             
@@ -298,9 +270,6 @@ if(pg_num_rows($resultado1)==0){
         </div>
     </div>
 
-
-
-  
 
 
 
@@ -344,6 +313,5 @@ if(pg_num_rows($resultado1)==0){
     
    
 
-    <?php include('footer.php');?>
 
 
