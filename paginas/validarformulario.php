@@ -23,7 +23,9 @@ include('conexion/database.php');
 $consultaEmail = "SELECT username FROM loginuser WHERE username ='$emailUsuario'";
 $res = pg_query($conexion, $consultaEmail);
 
+
 $ress = pg_num_rows($res);
+
 
 
 if(pg_num_rows($res)>0){
